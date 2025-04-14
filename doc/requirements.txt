@@ -1,1 +1,14 @@
 Creators: Tara Wright and Lauren Caldwell
+
+Dataset Description: The dataset contains information about 801 different Pokemon. This dataset can be found at https://www.kaggle.com/datasets/rounakbanik/pokemon?resource=download. To download, click the black download button in the top right corner. This dataset contains all basic statistics of each pokemon as well as their possible abilites, capture rate, damage taken against an attack, etc. The data used to create this csv was sourced from serebii.net.
+
+
+User Stories:
+
+1.
+
+
+2.
+
+
+3.

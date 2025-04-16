@@ -6,9 +6,11 @@ Dataset Description: The dataset contains information about 801 different Pokemo
 User Stories:
 
 1.
+A casual pokemon player wants to figure out the best pokemon to use on their team that is a fairy type for their first playthough of pokemon Black 2.
 
+Implementation: In the Best by Type tab, there is a drop down menu that lets you click on what type of pokemon you want to see. Once you click a type it will take you to a ranking of what pokemon are best for that type, you can then filter it by what game they are available in and thus find the best pokemon for the type and game that the user is looking for.
 
 2.
+A pokemon player new to nuzlocking(if a pokemon faints, it dies) wants to look up a specific pokemon and find out if it's worth using. They want to see its base stats, possible moves, evolutions/pre-evolutions, and abilities.
 
-
-3.
+Implementation: There is a search bar in our home page that allows you to search for a specific pokemon. Once the user inputs the pokemon they want to look at they will be taken to a page that shows the pokemon's sprites along with its typing, the types is strong and weak to, its evolution(s)/pre-evolution(s), base stats, height and weight, and gender percentage.

@@ -1,0 +1,55 @@
+
+REQUEST: /type/<pokemon_type>/[best={BEST}]
+
+GET parameters:
+
+    pokemon_type (Required) - return only pokemon of the given type
+
+    best (Optional, default = false) - return only the best pokemon of the given type
+
+RESPONSE: A json list of pokemon that are of the given type, each are sorted by pokedex number.
+
+    For example:
+
+        /type/grass
+            ["Bulbasaur", "Ivysaur", "Venusaur", "Oddish", "Gloom", "Vileplume", "Paras", "Parasect",
+             "Bellsprout", "Weepinbell", "Victreebel", "Exeggcute", "Exeggutor", "Tangela", "Chikorita", 
+             "Bayleef", "Meganium", "Bellossom", "Hoppip", "Skiploom", "Jumpluff", "Sunkern", "Sunflora", 
+             "Celebi", "Treecko", "Grovyle", "Sceptile", "Lotad", "Lombre", "Ludicolo", "Seedot", "Nuzleaf", 
+             "Shiftry", "Shroomish", "Breloom", "Roselia", "Cacnea", "Cacturne", "Lileep", "Cradily", "Tropius", 
+             "Turtwig", "Grotle", "Torterra", "Budew", "Roserade", "Wormadam", "Cherubi", "Cherrim", "Carnivine", 
+             "Snover", "Abomasnow", "Tangrowth", "Leafeon", "Shaymin", "Snivy", "Servine", "Serperior", "Pansage", 
+             "Simisage", "Sewaddle", "Swadloon", "Leavanny", "Cottonee", "Whimsicott", "Petilil", "Lilligant", "Maractus",
+             "Deerling", "Sawsbuck", "Foongus", "Amoonguss", "Ferroseed", "Ferrothorn", "Virizion", "Chespin", "Quilladin", 
+             "Chesnaught", "Skiddo", "Gogoat", "Phantump", "Trevenant", "Pumpkaboo", "Gourgeist", "Rowlet", "Dartrix", "Decidueye", 
+             "Fomantis", "Lurantis", "Morelull", "Shiinotic", "Bounsweet", "Steenee", "Tsareena", "Dhelmise", "Tapu Bulu", "Kartana"]
+
+        /type/grass/?best=best
+            ["Mega Sceptile"]
+
+REQUEST: /pokemon/<pokemon-name>
+RESPONSE: Returns a json list of the pokemon's name, generation, typing, and base stats.
+
+    for example:
+
+        /pokemon/Bulbasaur
+            ["Bulbasaur", "generation: 1", "grass", "poison", "Total base stats: 318", "hp: 45", "attack: 49", "defence: 49", "sp attack: 65", "sp defense: 65", "speed: 45"]
+    
+
+REQUEST: /generation/<generation_number>/[is_legendary={LEGENDARY}]
+
+    GET parameters:
+
+        generation_number (Required) - returns only the pokemon from a given generation
+
+        is_legendary (Optional, default = false) - returns only the legendary pokemon from a given generation
+
+RESPONSE: Returns a json list of the pokemon from a given generation.
+
+    for example:
+
+        /generation/1/
+            ["Bulbasaur", "Ivysaur", ....(more pokemon here).... "Mew"]
+    
+        /generation/1/?is_legendary = legendary
+            ["Zapdos", "Moltres", "Articuno", "Mewtwo", "Mew"]

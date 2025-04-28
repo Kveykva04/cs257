@@ -1,5 +1,5 @@
 
-REQUEST: /type/<pokemon_type>/[best={BEST}]
+REQUEST: /type/<pokemon_type>/[best={BEST}] //add stat to sort by
 
 GET parameters:
 

@@ -1,10 +1,13 @@
 import sys
 import flask
 import json
+
+from flask import app
 import config
 import psycopg2
 
-api = flask.Blueprint('api', __name__)
+app = flask.Flask(__name__)
+#api = flask.Blueprint('api', __name__)
 
 def get_connection():
     ''' Returns a database connection object with which you can create cursors,
@@ -60,7 +63,7 @@ def get_pokemon_by_type(search_text, best):
 
     return json.dumps(pokemon_by_type)
 
-@app.route('/pokemon/<pokemon-name>')
+@app.route('/pokemon/<pokemon_name>')
 def get_pokemon_stats_by_name(search_text):
     like_argument = '%' + search_text + '%'
     pokemon_by_name = []

@@ -1,3 +1,4 @@
+import argparse
 import sys
 import flask
 import json
@@ -6,7 +7,7 @@ from flask import app
 import config
 import psycopg2
 
-app = flask.Flask(__name__)
+app = flask.Flask(__name__, template_folder='templates')
 #api = flask.Blueprint('api', __name__)
 
 def get_connection():
@@ -22,6 +23,10 @@ def get_connection():
     except Exception as e:
         print(e, file=sys.stderr)
         exit()
+
+@app.route('/')
+def hello():
+    return 'Hello, Pokemon Lovers!'
 
 @app.route('/type/<pokemon_type>/[best={BEST}]')
 def get_pokemon_by_type(search_text, best):
@@ -52,7 +57,7 @@ def get_pokemon_by_type(search_text, best):
         else:
             cursor.execute(query, (chosen_type,))
 
-        # Iterate over the query results to produce the list of author names.
+        # Iterate over the query results to produce the list of pokemon of a given type.
         for row in cursor:
             pokemon_by_type.append({'Name':row[0], 'Type1':row[1], 'Type2':row[2]})
 
@@ -84,7 +89,7 @@ def get_pokemon_stats_by_name(search_text):
         cursor = connection.cursor()
         cursor.execute(query, (like_argument,))
 
-        # Iterate over the query results to produce the list of author names.
+        # Iterate over the query results to produce the list of a given pokemon stats.
         for row in cursor:
             pokemon_by_name.append({'Name':row[0], 'Type1':row[1], 'Type2':row[2], 'Total base stats': row[3], 'hp': row[4], 'attack': row[5], 'defence': row[6], 'sp attack': row[7], 'sp defense': row[8], 'speed': row[9]})
 
@@ -116,7 +121,7 @@ def get_pokemon_by_generation(generation_number, is_legendary):
         cursor = connection.cursor()
         cursor.execute(query, (gen_num, legnedary_bool,))
 
-        # Iterate over the query results to produce the list of author names.
+        # Iterate over the query results to produce the list of pokemon in a generation.
         for row in cursor:
             pokemon_by_generation.append({'Name':row[0], 'Type1':row[1], 'Type2':row[2], 'Legendary':row[3]})
 
@@ -130,3 +135,10 @@ def get_pokemon_by_generation(generation_number, is_legendary):
 @app.route('/help')
 def get_help():
     return flask.render_template('help.html')
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser('A Flask aplication that lists pokemon of a given type')
+    parser.add_argument('host', help='the host on which this application is running')
+    parser.add_argument('port', type=int, help='the port on which this application is listening')
+    arguments = parser.parse_args()
+    app.run(host=arguments.host, port=arguments.port, debug=True)

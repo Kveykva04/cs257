@@ -123,3 +123,7 @@ def get_pokemon_by_generation(generation_number, is_legendary):
         print(e, file=sys.stderr)
 
     return pokemon_by_generation
+
+@app.route('/help')
+def get_help():
+    return flask.render_template('help.html')

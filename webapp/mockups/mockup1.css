@@ -74,13 +74,14 @@ body {
     margin-top: 10px;     
 }
 
+/* smaller rectangle */
 .type_rectangle {
-    display: flex;
     height: 70px;
     width: 60%;
     
 }
 
+/* make things be able to be next to eachother */
 .side_by_side{
     display: flex;
     gap: 300px;
@@ -89,4 +90,10 @@ body {
 .base_stats_font {
     font-size: 20pt;
     color: black;
+}
+
+/* to make table */
+table, td, th {
+    border: 1px solid black;
+    padding: 10px;
 }

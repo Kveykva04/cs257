@@ -31,6 +31,8 @@ ul.horizontal-navbar li a:hover {
     
   }
 #white-navbar{
+    padding-left: 5%;
+    padding-right: 5%;
     float:left;
     background-color: white
 }

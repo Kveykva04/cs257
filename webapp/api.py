@@ -7,8 +7,7 @@ from flask import app
 import config
 import psycopg2
 
-app = flask.Flask(__name__, template_folder='templates')
-#api = flask.Blueprint('api', __name__)
+api = flask.Blueprint('api', __name__)
 
 def get_connection():
     ''' Returns a database connection object with which you can create cursors,
@@ -131,14 +130,3 @@ def get_pokemon_by_generation(generation_number, is_legendary):
         print(e, file=sys.stderr)
 
     return pokemon_by_generation
-
-@app.route('/help')
-def get_help():
-    return flask.render_template('help.html')
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser('A Flask aplication that lists pokemon of a given type')
-    parser.add_argument('host', help='the host on which this application is running')
-    parser.add_argument('port', type=int, help='the port on which this application is listening')
-    arguments = parser.parse_args()
-    app.run(host=arguments.host, port=arguments.port, debug=True)

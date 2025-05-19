@@ -29,6 +29,8 @@ ul.horizontal-navbar li a:hover {
     
   }
 #white-navbar{
+    padding-left: 5%;
+    padding-right: 5%;
     float:left;
     background-color: white
 }
@@ -48,7 +50,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 70px;
-    width: 50%;  
+    width: 40%; 
+    background-color: #f1f1f1; 
 }
 
 .name {
@@ -82,12 +85,12 @@ body {
     display: flex;
     height: 70px;
     width: 60%;
-    
+    padding-top: 10px;
 }
 
 .side_by_side{
     display: flex;
-    gap: 300px;
+    gap: 400px;
 }
 
 .type-side_by_side{
@@ -100,4 +103,10 @@ body {
 .base_stats_font {
     font-size: 20pt;
     color: black;
+}
+
+/* to make table */
+table, td, th {
+    border: 1px solid black;
+    padding: 10px;
 }

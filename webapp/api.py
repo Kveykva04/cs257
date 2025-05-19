@@ -1,8 +1,6 @@
-import argparse
 import sys
 import flask
 import json
-from flask import app
 import config
 import psycopg2
 
@@ -22,11 +20,11 @@ def get_connection():
         print(e, file=sys.stderr)
         exit()
 
-@app.route('/')
+@api.route('/')
 def hello():
     return 'Hello, Pokemon Lovers!'
 
-@app.route('/type/<pokemon_type>/[best={BEST}]')
+@api.route('/type/<pokemon_type>/[best={BEST}]')
 def get_pokemon_by_type(search_text, best):
     chosen_type = '%' + search_text + '%'
     best_bool = '?' + best
@@ -66,7 +64,7 @@ def get_pokemon_by_type(search_text, best):
 
     return json.dumps(pokemon_by_type)
 
-@app.route('/pokemon/<pokemon_name>')
+@api.route('/pokemon/<pokemon_name>')
 def get_pokemon_stats_by_name(search_text):
     like_argument = '%' + search_text + '%'
     pokemon_by_name = []
@@ -98,7 +96,7 @@ def get_pokemon_stats_by_name(search_text):
 
     return json.dumps(pokemon_by_name)
 
-@app.route('/generation/<generation_number>/[is_legendary={LEGENDARY}]')
+@api.route('/generation/<generation_number>/[is_legendary={LEGENDARY}]')
 def get_pokemon_by_generation(generation_number, is_legendary):
     gen_num = '%' + generation_number + '%'
     legnedary_bool = '?' + is_legendary

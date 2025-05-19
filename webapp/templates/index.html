@@ -3,12 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}" type="text/css" />
     </head>
 
     <body>
-        <ul>
-            <li><a href="mockup1.html">Pokemon Search</a></li>
-            <li><a href="mockup2.html">Type Search</a></li>
+        <ul class="horizontal-navbar"  id = "red-navbar">
+            <li><a href="index.html">Home Title</a></li> </ul>
+        
+        <ul class="horizontal-navbar">
+            <li id = "white-navbar"> <a href="mockup1.html">Pokemon Search</a></li>
+            <li id = "white-navbar"><a href="mockup2.html">Type Search</a></li>
         </ul>
     </body>
 </html>

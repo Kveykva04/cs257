@@ -7,12 +7,7 @@
 window.addEventListener("load", initialize);
 
 function initialize() {
-    loadAuthorsSelector();
 
-    let element = document.getElementById('author_selector');
-    if (element) {
-        element.onchange = onAuthorsSelectionChanged;
-    }
 }
 
 // Returns the base URL of the API, onto which endpoint
@@ -25,8 +20,8 @@ function getAPIBaseURL() {
     return baseURL;
 }
 
-function loadAuthorsSelector() {
-    let url = getAPIBaseURL() + '/authors/';
+function loadPokemonSelector() {
+    let url = getAPIBaseURL() + '/pokemon';
 
     // Send the request to the books API /authors/ endpoint
     fetch(url, {method: 'get'})
@@ -40,14 +35,14 @@ function loadAuthorsSelector() {
     .then(function(result) {
         // Add the <option> elements to the <select> element
         let selectorBody = '';
-        for (let k = 0; k < result.authors.length; k++) {
-            let author = result.authors[k];
-            selectorBody += '<option value="' + author['id'] + '">'
-                                + author['surname'] + ', ' + author['given_name']
+        for (let k = 0; k < result.pokemon_type_stats.length; k++) {
+            let pokemon = result.pokemon_type_stats[k];
+            selectorBody += '<option value="' + pokemon['name'] + '">'
+                                + pokemon['name']
                                 + '</option>\n';
         }
 
-        let selector = document.getElementById('author_selector');
+        let selector = document.getElementById('pokemon_selector');
         if (selector) {
             selector.innerHTML = selectorBody;
         }
@@ -60,13 +55,13 @@ function loadAuthorsSelector() {
 }
 
 function onAuthorsSelectionChanged() {
-    let element = document.getElementById('author_selector');
+    let element = document.getElementById('pokemon_selector');
     if (!element) {
         return;
     }
-    let authorID = element.value; 
+    let pokemon_name = element.value; 
 
-    let url = getAPIBaseURL() + '/books/author/' + authorID;
+    let url = getAPIBaseURL() + '/pokemon/' + pokemon_name;
 
     fetch(url, {method: 'get'})
 

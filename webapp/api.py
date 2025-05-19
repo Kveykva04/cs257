@@ -2,7 +2,6 @@ import argparse
 import sys
 import flask
 import json
-
 from flask import app
 import config
 import psycopg2

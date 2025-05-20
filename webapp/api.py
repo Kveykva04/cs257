@@ -40,14 +40,15 @@ def get_types():
     except Exception as e:
         print(e, file=sys.stderr)
 
-    result = {'pokemon_types':types}
-    return json.dumps(result)
+    return json.dumps(types)
 
 @api.route('/type/<pokemon_type>/[best={BEST}]')
 def get_pokemon_by_type(search_text, best):
-    chosen_type = '%' + search_text + '%'
-    best_bool = '?' + best
-
+    chosen_type = search_text
+    if (best):
+        best_bool = best
+    else:
+        best_bool = False
     pokemon_by_type = []
     try:
         # Create a "cursor", which is an object with which you can iterate
@@ -81,12 +82,32 @@ def get_pokemon_by_type(search_text, best):
     except Exception as e:
         print(e, file=sys.stderr)
 
-    result2 = {'pokemon_by_type':pokemon_by_type}
-    return json.dumps(result2)
+    return json.dumps(pokemon_by_type)
+
+@api.route('/allPokemon/')
+def get_all_pokemon():
+
+    names = []
+    query = '''Select pokemon_type_stats.name
+                    FROM pokemon_type_stats'''
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, tuple())
+
+        # Iterate over the query results to produce the list of pokemon of a given type.
+        for row in cursor:
+            names.append({'name':row[0]})
+
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(names)
 
 @api.route('/pokemon/<pokemon_name>')
-def get_pokemon_stats_by_name(search_text):
-    like_argument = '%' + search_text + '%'
+def get_pokemon_stats_by_name(pokemon_name):
     pokemon_by_name = []
     try:
         # Create a "cursor", which is an object with which you can iterate
@@ -95,19 +116,16 @@ def get_pokemon_stats_by_name(search_text):
         cursor = connection.cursor()
 
         # Execute the query
-        query = '''SELECT pokemon_type_stats.name, pokemon_generation.generation, pokemon_type_stats.type1, pokemon_type_stats.type2, pokemon_type_stats.base_total, pokemon_type_stats.hp, pokemon_type_stats.attack, pokemon_type_stats.defence, pokemon_type_stats.sp_attack, pokemon_type_stats.sp_defence, pokemon_type_stats.speed
-                    FROM pokemon_generation
-                    JOIN pokemon_type_stats
-                    ON pokemon_generation.name = pokemon_type_stats.name
-                    WHERE (pokemon_type_stats.type1 = %s
-                    OR pokemon_type_stats.type2 = %s);'''
+        query = '''SELECT pokemon_type_stats.name, pokemon_type_stats.type1, pokemon_type_stats.type2, pokemon_type_stats.base_total, pokemon_type_stats.hp, pokemon_type_stats.attack, pokemon_type_stats.defense, pokemon_type_stats.sp_attack, pokemon_type_stats.sp_defense, pokemon_type_stats.speed
+                    FROM pokemon_type_stats
+                    WHERE pokemon_type_stats.name = %s;'''
         connection = get_connection()
         cursor = connection.cursor()
-        cursor.execute(query, (like_argument,))
+        cursor.execute(query, (pokemon_name,))
 
         # Iterate over the query results to produce the list of a given pokemon stats.
         for row in cursor:
-            pokemon_by_name.append({'Name':row[0], 'Type1':row[1], 'Type2':row[2], 'Total base stats': row[3], 'hp': row[4], 'attack': row[5], 'defence': row[6], 'sp attack': row[7], 'sp defense': row[8], 'speed': row[9]})
+            pokemon_by_name.append({'Name':row[0], 'Type1':row[1], 'Type2':row[2], 'Total base stats': row[3], 'hp': row[4], 'attack': row[5], 'defense': row[6], 'sp attack': row[7], 'sp defense': row[8], 'speed': row[9]})
 
         cursor.close()
         connection.close()
@@ -118,8 +136,8 @@ def get_pokemon_stats_by_name(search_text):
 
 @api.route('/generation/<generation_number>/[is_legendary={LEGENDARY}]')
 def get_pokemon_by_generation(generation_number, is_legendary):
-    gen_num = '%' + generation_number + '%'
-    legnedary_bool = '?' + is_legendary
+    gen_num = generation_number
+    legnedary_bool = is_legendary
 
     pokemon_by_generation = []
     try:

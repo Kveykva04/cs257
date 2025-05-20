@@ -9,7 +9,7 @@ window.addEventListener("load", initialize);
 function initialize() {
     loadTypeSelector();
 
-    let element = document.getElementById('type_selector');
+    let element = document.getElementById('pokemon_selector');
     if (element) {
         element.onchange = onTypeSelectionChanged;
     }
@@ -26,7 +26,7 @@ function getAPIBaseURL() {
 }
 
 function loadTypeSelector() {
-    let url = getAPIBaseURL() + '/types/';
+    let url = getAPIBaseURL() + '/allPokemon/';
 
     // Send the request to the books API /types/ endpoint
     fetch(url, {method: 'get'})
@@ -37,17 +37,17 @@ function loadTypeSelector() {
 
     // Once you have your list of author dictionaries, use it to build
     // an HTML table displaying the author names and lifespan.
-    .then(function(result) {
+    .then(function(names) {
         // Add the <option> elements to the <select> element
         let selectorBody = '';
-        for (let k = 0; k < result.pokemon_types.length; k++) {
-            let types = result.pokemon_types[k];
-            selectorBody += '<option value="' + types['type_name'] + '">'
-                                + types['type_name']
+        for (let k = 0; k < names.length; k++) {
+            let name_list = names[k];
+            selectorBody += '<option value="' + name_list['name'] + '">'
+                                + name_list['name']
                                 + '</option>\n';
         }
 
-        let selector = document.getElementById('type_selector');
+        let selector = document.getElementById('pokemon_selector');
         if (selector) {
             selector.innerHTML = selectorBody;
         }
@@ -60,26 +60,33 @@ function loadTypeSelector() {
 }
 
 function onTypeSelectionChanged() {
-    let element = document.getElementById('type_selector');
+    let element = document.getElementById('pokemon_selector');
     if (!element) {
         return;
     }
-    let chosen_type = element.value.toLowerCase(); 
+    let chosen_pokemon = element.value; 
 
-    let url = getAPIBaseURL() + '/type/' + chosen_type;
+    let url = getAPIBaseURL() + '/pokemon/' + chosen_pokemon;
 
     fetch(url, {method: 'get'})
 
     .then((response) => response.json())
 
-    .then(function(result2) {
+    .then(function(pokemon_list) {
         let tableBody = '';
-        for (let k = 0; k < result2.pokemon_type_stats.length; k++) {
-            let pokemon = result2.pokemon_type_stats[k];
+        for (let k = 0; k < pokemon_list.length; k++) {
+            let pokemon = pokemon_list[k];
             tableBody += '<tr>'
-                            + '<td>' + pokemon['name'] + '</td>'
-                            + '<td>' + pokemon['type1'] + '</td>'
-                            + '<td>' + pokemon['type2'] + '</td>'
+                            + '<td>' + pokemon['Name'] + '</td>'
+                            + '<td>' + pokemon['Type1'] + '</td>'
+                            + '<td>' + pokemon['Type2'] + '</td>'
+                            + '<td>' + pokemon['Total base stats'] + '</td>'
+                            + '<td>' + pokemon['hp'] + '</td>'
+                            + '<td>' + pokemon['attack'] + '</td>'
+                            + '<td>' + pokemon['defense'] + '</td>'
+                            + '<td>' + pokemon['sp attack'] + '</td>'
+                            + '<td>' + pokemon['sp defense'] + '</td>'
+                            + '<td>' + pokemon['speed'] + '</td>'
                             + '</tr>\n';
         }
 

@@ -42,8 +42,8 @@ function loadTypeSelector() {
         let selectorBody = '';
         for (let k = 0; k < result.pokemon_types.length; k++) {
             let types = result.pokemon_types[k];
-            selectorBody += '<option value="' + types['type'] + '">'
-                                + types['type']
+            selectorBody += '<option value="' + types['type_name'] + '">'
+                                + types['type_name']
                                 + '</option>\n';
         }
 
@@ -64,7 +64,7 @@ function onTypeSelectionChanged() {
     if (!element) {
         return;
     }
-    let chosen_type = element.value; 
+    let chosen_type = element.value.toLowerCase(); 
 
     let url = getAPIBaseURL() + '/type/' + chosen_type;
 
@@ -72,10 +72,10 @@ function onTypeSelectionChanged() {
 
     .then((response) => response.json())
 
-    .then(function(pokemon_type_stats) {
+    .then(function(result2) {
         let tableBody = '';
-        for (let k = 0; k < pokemon_type_stats.length; k++) {
-            let pokemon = pokemon_type_stats[k];
+        for (let k = 0; k < result2.pokemon_type_stats.length; k++) {
+            let pokemon = result2.pokemon_type_stats[k];
             tableBody += '<tr>'
                             + '<td>' + pokemon['name'] + '</td>'
                             + '<td>' + pokemon['type1'] + '</td>'
@@ -86,7 +86,7 @@ function onTypeSelectionChanged() {
         // Put the table body we just built inside the table that's already on the page.
         let pokemonTable = document.getElementById('pokemon_table');
         if (pokemonTable) {
-            booksTable.innerHTML = tableBody;
+            pokemonTable.innerHTML = tableBody;
         }
     })
 

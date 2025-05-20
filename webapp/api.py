@@ -24,7 +24,7 @@ def get_connection():
 def get_types():
 
     types = []
-    query = '''Select pokemon_types.num, pokemon_types.type
+    query = '''Select pokemon_types.type_id, pokemon_types.type_name
                     FROM pokemon_types'''
     try:
         connection = get_connection()
@@ -33,7 +33,7 @@ def get_types():
 
         # Iterate over the query results to produce the list of pokemon of a given type.
         for row in cursor:
-            types.append({'num':row[0], 'type':row[1]})
+            types.append({'type_id':row[0], 'type_name':row[1]})
 
         cursor.close()
         connection.close()
@@ -81,7 +81,8 @@ def get_pokemon_by_type(search_text, best):
     except Exception as e:
         print(e, file=sys.stderr)
 
-    return json.dumps(pokemon_by_type)
+    result2 = {'pokemon_by_type':pokemon_by_type}
+    return json.dumps(result2)
 
 @api.route('/pokemon/<pokemon_name>')
 def get_pokemon_stats_by_name(search_text):

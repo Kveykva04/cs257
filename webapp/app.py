@@ -9,6 +9,14 @@ app.register_blueprint(api.api, url_prefix='/api')
 def home():
     return flask.render_template('index.html')
 
+@app.route('/mockup1')
+def get_poke_search():
+    return flask.render_template('mockup1.html')
+
+@app.route('/mockup2')
+def get_type_search():
+    return flask.render_template('mockup2.html')
+
 @app.route('/help')
 def get_help():
     return flask.render_template('help.html')

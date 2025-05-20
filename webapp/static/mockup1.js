@@ -7,7 +7,12 @@
 window.addEventListener("load", initialize);
 
 function initialize() {
+    loadTypeSelector();
 
+    let element = document.getElementById('type_selector');
+    if (element) {
+        element.onchange = onTypeSelectionChanged;
+    }
 }
 
 // Returns the base URL of the API, onto which endpoint
@@ -20,10 +25,10 @@ function getAPIBaseURL() {
     return baseURL;
 }
 
-function loadPokemonSelector() {
-    let url = getAPIBaseURL() + '/type';
+function loadTypeSelector() {
+    let url = getAPIBaseURL() + '/types/';
 
-    // Send the request to the books API /authors/ endpoint
+    // Send the request to the books API /types/ endpoint
     fetch(url, {method: 'get'})
 
     // When the results come back, transform them from a JSON string into
@@ -35,10 +40,10 @@ function loadPokemonSelector() {
     .then(function(result) {
         // Add the <option> elements to the <select> element
         let selectorBody = '';
-        for (let k = 0; k < result.pokemon_type_stats.length; k++) {
-            let pokemon = result.pokemon_type_stats[k];
-            selectorBody += '<option value="' + k + '">'
-                                + pokemon['type1']
+        for (let k = 0; k < result.pokemon_types.length; k++) {
+            let types = result.pokemon_types[k];
+            selectorBody += '<option value="' + types['type'] + '">'
+                                + types['type']
                                 + '</option>\n';
         }
 
@@ -79,8 +84,8 @@ function onTypeSelectionChanged() {
         }
 
         // Put the table body we just built inside the table that's already on the page.
-        let booksTable = document.getElementById('pokemon_table');
-        if (booksTable) {
+        let pokemonTable = document.getElementById('pokemon_table');
+        if (pokemonTable) {
             booksTable.innerHTML = tableBody;
         }
     })

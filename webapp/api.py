@@ -20,9 +20,28 @@ def get_connection():
         print(e, file=sys.stderr)
         exit()
 
-@api.route('/')
-def hello():
-    return 'Hello, Pokemon Lovers!'
+@api.route('/types/')
+def get_types():
+
+    types = []
+    query = '''Select pokemon_types.num, pokemon_types.type
+                    FROM pokemon_types'''
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, tuple())
+
+        # Iterate over the query results to produce the list of pokemon of a given type.
+        for row in cursor:
+            types.append({'num':row[0], 'type':row[1]})
+
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    result = {'pokemon_types':types}
+    return json.dumps(result)
 
 @api.route('/type/<pokemon_type>/[best={BEST}]')
 def get_pokemon_by_type(search_text, best):

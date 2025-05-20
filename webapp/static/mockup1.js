@@ -7,12 +7,7 @@
 window.addEventListener("load", initialize);
 
 function initialize() {
-    loadAuthorsSelector();
 
-    let element = document.getElementById('author_selector');
-    if (element) {
-        element.onchange = onAuthorsSelectionChanged;
-    }
 }
 
 // Returns the base URL of the API, onto which endpoint
@@ -25,8 +20,8 @@ function getAPIBaseURL() {
     return baseURL;
 }
 
-function loadAuthorsSelector() {
-    let url = getAPIBaseURL() + '/authors/';
+function loadPokemonSelector() {
+    let url = getAPIBaseURL() + '/type';
 
     // Send the request to the books API /authors/ endpoint
     fetch(url, {method: 'get'})
@@ -40,14 +35,14 @@ function loadAuthorsSelector() {
     .then(function(result) {
         // Add the <option> elements to the <select> element
         let selectorBody = '';
-        for (let k = 0; k < result.authors.length; k++) {
-            let author = result.authors[k];
-            selectorBody += '<option value="' + author['id'] + '">'
-                                + author['surname'] + ', ' + author['given_name']
+        for (let k = 0; k < result.pokemon_type_stats.length; k++) {
+            let pokemon = result.pokemon_type_stats[k];
+            selectorBody += '<option value="' + k + '">'
+                                + pokemon['type1']
                                 + '</option>\n';
         }
 
-        let selector = document.getElementById('author_selector');
+        let selector = document.getElementById('type_selector');
         if (selector) {
             selector.innerHTML = selectorBody;
         }
@@ -59,31 +54,32 @@ function loadAuthorsSelector() {
     });
 }
 
-function onAuthorsSelectionChanged() {
-    let element = document.getElementById('author_selector');
+function onTypeSelectionChanged() {
+    let element = document.getElementById('type_selector');
     if (!element) {
         return;
     }
-    let authorID = element.value; 
+    let chosen_type = element.value; 
 
-    let url = getAPIBaseURL() + '/books/author/' + authorID;
+    let url = getAPIBaseURL() + '/type/' + chosen_type;
 
     fetch(url, {method: 'get'})
 
     .then((response) => response.json())
 
-    .then(function(books) {
+    .then(function(pokemon_type_stats) {
         let tableBody = '';
-        for (let k = 0; k < books.length; k++) {
-            let book = books[k];
+        for (let k = 0; k < pokemon_type_stats.length; k++) {
+            let pokemon = pokemon_type_stats[k];
             tableBody += '<tr>'
-                            + '<td>' + book['title'] + '</td>'
-                            + '<td>' + book['publication_year'] + '</td>'
+                            + '<td>' + pokemon['name'] + '</td>'
+                            + '<td>' + pokemon['type1'] + '</td>'
+                            + '<td>' + pokemon['type2'] + '</td>'
                             + '</tr>\n';
         }
 
         // Put the table body we just built inside the table that's already on the page.
-        let booksTable = document.getElementById('books_table');
+        let booksTable = document.getElementById('pokemon_table');
         if (booksTable) {
             booksTable.innerHTML = tableBody;
         }

@@ -1,0 +1,135 @@
+
+
+ul.horizontal-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+ul.horizontal-navbar li {
+    
+}
+
+ul.horizontal-navbar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.horizontal-navbar li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+#red-navbar {
+    font-size: 24pt;
+    background-color: #ee1515
+    
+  }
+#white-navbar{
+    padding-left: 5%;
+    padding-right: 5%;
+    float:left;
+    background-color: white
+}
+
+body {
+    margin: 20px;
+}
+
+.rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    
+}
+
+.name {
+    font-size: 24pt;
+    display: flex;
+    color: black;
+}
+
+#pokemon_name {
+    width: 60%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ee1515;
+}
+
+.classification {
+    font-size: 14pt;
+    display: flex;
+    color: black;
+}
+
+.poke-image {
+    width: 350px;        
+    height: auto;         
+    margin-left: 100px;   
+    margin-top: 10px;     
+}
+
+/* smaller rectangle */
+.type_rectangle {
+    height: 70px;
+    width: 60%;
+    
+}
+
+/* absol and chart next to eachother */
+.side_by_side{
+    display: flex;
+    gap: 400px;
+}
+
+.base_stats_font {
+    font-size: 20pt;
+    color: black;
+}
+
+/* to make table */
+table, td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.gender_rectangle {
+    height: 100px;
+    width: 200px;
+    
+}
+
+/* make things be able to be right next to eachother */
+.right_next{
+    display: flex;
+}
+
+#female{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+
+#male{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: blue;
+}
+
+/* make things be able to be next to eachother */
+.weakness_and_gender_side{
+    display: flex;
+    gap:400px;
+}

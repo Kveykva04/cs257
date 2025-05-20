@@ -76,27 +76,27 @@ function onNameSelectionChanged() {
         let tableBody = '';
         let type1Body = '';
         let type2Body = '';
-        for (let k = 0; k < pokemon_list.length; k++) {
-            let pokemon = pokemon_list[k];
-            tableBody += '<tr>'
-                            + '<tr><th>Stat</th><th>Points</th></tr>'
-                            + '<tr><td>HP</td><td>' + pokemon['hp'] + '</td></tr>'
-                            + '<tr><td>Atk</td><td>' + pokemon['attack'] + '</td></tr>'
-                            + '<tr><td>Def</td><td>' + pokemon['defense'] + '</td></tr>'
-                            + '<tr><td>Sp. Atk</td><td>' + pokemon['sp attack'] + '</td></tr>'
-                            + '<tr><td>Sp. Def</td><td>' + pokemon['sp defense'] + '</td></tr>'
-                            + '<tr><td>Speed</td><td>' + pokemon['speed'] + '</td></tr>'
-                            + '<tr><td>Total</td><td>' + pokemon['Total base stats'] + '</td></tr>'
-                            + '</tr>\n';
-            type1Body += pokemon['Type1'];
-            if(pokemon['Type2'] == null)
-            {
-                type2Body += 'n/a\n'
-            }
-            else
-            {
-                type2Body += pokemon['Type2'];
-            }
+        let pokemon = pokemon_list[0];
+
+        //need an sql and api for classification, gender, strengths, weaknesses, and (images?)
+        tableBody += '<tr>'
+                        + '<tr><th>Stat</th><th>Points</th></tr>'
+                        + '<tr><td>HP</td><td>' + pokemon['hp'] + '</td></tr>'
+                        + '<tr><td>Atk</td><td>' + pokemon['attack'] + '</td></tr>'
+                        + '<tr><td>Def</td><td>' + pokemon['defense'] + '</td></tr>'
+                        + '<tr><td>Sp. Atk</td><td>' + pokemon['sp attack'] + '</td></tr>'
+                        + '<tr><td>Sp. Def</td><td>' + pokemon['sp defense'] + '</td></tr>'
+                        + '<tr><td>Speed</td><td>' + pokemon['speed'] + '</td></tr>'
+                        + '<tr><td>Total</td><td>' + pokemon['Total base stats'] + '</td></tr>'
+                        + '</tr>\n';
+        type1Body += pokemon['Type1'];
+        if(pokemon['Type2'] == null)
+        {
+            type2Body += 'n/a\n'
+        }
+        else
+        {
+            type2Body += pokemon['Type2'];
         }
 
         // Put the table body we just built inside the table that's already on the page.

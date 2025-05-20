@@ -77,16 +77,14 @@ function onNameSelectionChanged() {
         for (let k = 0; k < pokemon_list.length; k++) {
             let pokemon = pokemon_list[k];
             tableBody += '<tr>'
-                            + '<td>' + pokemon['Name'] + '</td>'
-                            + '<td>' + pokemon['Type1'] + '</td>'
-                            + '<td>' + pokemon['Type2'] + '</td>'
-                            + '<td>' + pokemon['Total base stats'] + '</td>'
-                            + '<td>' + pokemon['hp'] + '</td>'
-                            + '<td>' + pokemon['attack'] + '</td>'
-                            + '<td>' + pokemon['defense'] + '</td>'
-                            + '<td>' + pokemon['sp attack'] + '</td>'
-                            + '<td>' + pokemon['sp defense'] + '</td>'
-                            + '<td>' + pokemon['speed'] + '</td>'
+                            + '<tr><th>Stat</th><th>Points</th></tr>'
+                            + '<tr><td>HP</td><td>' + pokemon['hp'] + '</td></tr>'
+                            + '<tr><td>Atk</td><td>' + pokemon['attack'] + '</td></tr>'
+                            + '<tr><td>Def</td><td>' + pokemon['defense'] + '</td></tr>'
+                            + '<tr><td>Sp. Atk</td><td>' + pokemon['sp attack'] + '</td></tr>'
+                            + '<tr><td>Sp. Def</td><td>' + pokemon['sp defense'] + '</td></tr>'
+                            + '<tr><td>Speed</td><td>' + pokemon['speed'] + '</td></tr>'
+                            + '<tr><td>Total</td><td>' + pokemon['Total base stats'] + '</td></tr>'
                             + '</tr>\n';
         }
 

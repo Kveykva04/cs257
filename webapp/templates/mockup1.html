@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Mockup1</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='mockup1.css') }}" type="text/css" />
+        <script type="text/javascript" src="{{ url_for('static', filename='mockup1.js') }}" ></script>
     </head>
 
     <body>
@@ -16,7 +17,7 @@
         </ul>
         
         <div class="rectangle">
-            <div id="pokemon_name" class="name">Absol</div>
+            <div id="pokemon_name" class="name"><select id="pokemon_selector"></select></div>
         </div>
 
         <div class="rectangle">
@@ -25,15 +26,15 @@
         <div class = "side_by_side">
         <img src="https://static.wikia.nocookie.net/pokemonempyrean/images/3/30/359.png/revision/latest?cb=20200825130040" class = poke-image>
 
-        <table>
+        <table id="pokemon_table">
         <tr><th>Stat</th><th>Points</th></tr>
-        <tr><td>HP</td><td>65</td></tr>
-        <tr><td>Atk</td><td>130</td></tr>
-        <tr><td>Def</td><td>60</td></tr>
-        <tr><td>Sp. Atk</td><td>75</td></tr>
-        <tr><td>Sp. Def</td><td>60</td></tr>
-        <tr><td>Speed</td><td>75</td></tr>
-        <tr><td>Total</td><td>465</td></tr>
+        <tr><td>HP</td><td>n/a</td></tr>
+        <tr><td>Atk</td><td>n/a</td></tr>
+        <tr><td>Def</td><td>6n/a0</td></tr>
+        <tr><td>Sp. Atk</td><td>n/a</td></tr>
+        <tr><td>Sp. Def</td><td>n/a</td></tr>
+        <tr><td>Speed</td><td>n/a</td></tr>
+        <tr><td>Total</td><td>n/a</td></tr>
         
         </table>
         </div>

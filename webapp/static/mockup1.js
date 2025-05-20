@@ -74,6 +74,8 @@ function onNameSelectionChanged() {
 
     .then(function(pokemon_list) {
         let tableBody = '';
+        let type1Body = '';
+        let type2Body = '';
         for (let k = 0; k < pokemon_list.length; k++) {
             let pokemon = pokemon_list[k];
             tableBody += '<tr>'
@@ -86,12 +88,30 @@ function onNameSelectionChanged() {
                             + '<tr><td>Speed</td><td>' + pokemon['speed'] + '</td></tr>'
                             + '<tr><td>Total</td><td>' + pokemon['Total base stats'] + '</td></tr>'
                             + '</tr>\n';
+            type1Body += pokemon['Type1'];
+            if(pokemon['Type2'] == null)
+            {
+                type2Body += 'n/a\n'
+            }
+            else
+            {
+                type2Body += pokemon['Type2'];
+            }
         }
 
         // Put the table body we just built inside the table that's already on the page.
         let pokemonTable = document.getElementById('pokemon_table');
         if (pokemonTable) {
             pokemonTable.innerHTML = tableBody;
+        }
+
+        let pokemonType1 = document.getElementById('pokemon_type1')
+        let pokemonType2 = document.getElementById('pokemon_type2')
+        if (pokemonType1) {
+            pokemonType1.innerHTML = type1Body;
+        }
+        if (pokemonType2) {
+            pokemonType2.innerHTML = type2Body;
         }
     })
 

@@ -63,6 +63,22 @@ body {
     background-color: #ee1515;
 }
 
+#pokemon_type1 {
+    width: 60%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ee1515;
+}
+
+#pokemon_type2 {
+    width: 60%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ee1515;
+}
+
 .classification {
     font-size: 14pt;
     display: flex;

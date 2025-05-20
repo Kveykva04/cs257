@@ -16,12 +16,15 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
+DROP TABLE public.pokemon_types;
+DROP TABLE public.pokemon_type_stats;
+DROP TABLE public.pokemon_generation;
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
 --
--- Name: pokemon_generation; Type: TABLE; Schema: public; Owner: laurencaldwell
+-- Name: pokemon_generation; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.pokemon_generation (
@@ -31,10 +34,8 @@ CREATE TABLE public.pokemon_generation (
 );
 
 
-ALTER TABLE public.pokemon_generation OWNER TO laurencaldwell;
-
 --
--- Name: pokemon_type_stats; Type: TABLE; Schema: public; Owner: laurencaldwell
+-- Name: pokemon_type_stats; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.pokemon_type_stats (
@@ -51,10 +52,18 @@ CREATE TABLE public.pokemon_type_stats (
 );
 
 
-ALTER TABLE public.pokemon_type_stats OWNER TO laurencaldwell;
+--
+-- Name: pokemon_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.pokemon_types (
+    type_id integer,
+    type_name text
+);
+
 
 --
--- Data for Name: pokemon_generation; Type: TABLE DATA; Schema: public; Owner: laurencaldwell
+-- Data for Name: pokemon_generation; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.pokemon_generation (name, generation, is_legendary) FROM stdin;
@@ -863,7 +872,7 @@ Magearna	7	1
 
 
 --
--- Data for Name: pokemon_type_stats; Type: TABLE DATA; Schema: public; Owner: laurencaldwell
+-- Data for Name: pokemon_type_stats; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.pokemon_type_stats (name, type1, type2, base_total, hp, attack, defense, sp_attack, sp_defense, speed) FROM stdin;
@@ -1668,6 +1677,32 @@ Kartana	grass	steel	570	59	181	131	59	31	109
 Guzzlord	dark	dragon	570	223	101	53	97	53	43
 Necrozma	psychic	\N	600	97	107	101	127	89	79
 Magearna	steel	fairy	600	80	95	115	130	115	65
+\.
+
+
+--
+-- Data for Name: pokemon_types; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.pokemon_types (type_id, type_name) FROM stdin;
+1	Normal
+2	Fire
+3	Water
+4	Grass
+5	Electric
+6	Ice
+7	Fighting
+8	Poison
+9	Ground
+10	Flying
+11	Psychic
+12	Bug
+13	Rock
+14	Ghost
+15	Dragon
+16	Dark
+17	Steel
+18	Fairy
 \.
 
 

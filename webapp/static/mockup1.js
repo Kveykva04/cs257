@@ -130,7 +130,7 @@ function onNameSelectionChanged() {
 
 
 function loadWeakAndStrong(chosen_type) {
-    let newUrl = getAPIBaseURL() + '/WeakAndStrong/' + chosen_type;
+    let newUrl = getAPIBaseURL() + '/strong_weak/' + chosen_type;
 
     // Send the request to the books API /types/ endpoint
     fetch(newUrl, {method: 'get'})
@@ -147,48 +147,48 @@ function loadWeakAndStrong(chosen_type) {
         let strongline = '';
         let weakline = '';
 
-        let weakness = sAndw.weaknesses[0];
-        let strength = sAndw.strengths[0];
-        if(strength['strong5'] != null)
+        let SW = sAndw[0];
+    
+        if(SW['strong5'] != null)
         {
-            strongline = '<tr><td>Strong Against:</td><td>' + strength['strong1'] + '</td><td>' +  strength['strong2'] + '</td><td>' +  strength['strong3'] + '</td><td>' +  strength['strong4'] + '</td><td>' +  strength['strong5'] + '</td></tr>';
+            strongline = '<tr><td>Strong Against:</td><td>' + SW['strong1'] + '</td><td>' +  SW['strong2'] + '</td><td>' +  SW['strong3'] + '</td><td>' +  SW['strong4'] + '</td><td>' +  SW['strong5'] + '</td></tr>';
         }
-        else if(strength['strong4'] != null)
+        else if(SW['strong4'] != null)
         {
-            strongline = '<tr><td>Strong Against:</td><td>' + strength['strong1'] + '</td><td>' +  strength['strong2'] + '</td><td>' +  strength['strong3'] + '</td><td>' +  strength['strong4'] + '</td></tr>';
+            strongline = '<tr><td>Strong Against:</td><td>' + SW['strong1'] + '</td><td>' +  SW['strong2'] + '</td><td>' +  SW['strong3'] + '</td><td>' +  SW['strong4'] + '</td></tr>';
         }
-        else if(strength['strong3'] != null)
+        else if(SW['strong3'] != null)
         {
-            strongline = '<tr><td>Strong Against:</td><td>' + strength['strong1'] + '</td><td>' +  strength['strong2'] + '</td><td>' +  strength['strong3'] + '</td></tr>';
+            strongline = '<tr><td>Strong Against:</td><td>' + SW['strong1'] + '</td><td>' +  SW['strong2'] + '</td><td>' +  SW['strong3'] + '</td></tr>';
         }
-        else if(strength['strong2'] != null)
+        else if(SW['strong2'] != null)
         {
-            strongline = '<tr><td>Strong Against:</td><td>' + strength['strong1'] + '</td><td>' +  strength['strong2'] + '</td></tr>';
+            strongline = '<tr><td>Strong Against:</td><td>' + SW['strong1'] + '</td><td>' +  SW['strong2'] + '</td></tr>';
         }
         else
         {
-            strongline = '<tr><td>Strong Against:</td><td>' + strength['strong1'] + '</td></tr>';
+            strongline = '<tr><td>Strong Against:</td><td>' + SW['strong1'] + '</td></tr>';
         }
 
-        if(weakness['weak5'] != null)
+        if(SW['weak5'] != null)
         {
-            weakline = '<tr><td>Weak Against:</td><td>' + weakness['weak1'] + '</td><td>' +  weakness['weak2'] + '</td><td>' +  weakness['weak3'] + '</td><td>' +  weakness['weak4'] + '</td><td>' +  weakness['weak5'] + '</td></tr>';
+            weakline = '<tr><td>Weak Against:</td><td>' + SW['weak1'] + '</td><td>' +  SW['weak2'] + '</td><td>' +  SW['weak3'] + '</td><td>' +  SW['weak4'] + '</td><td>' +  SW['weak5'] + '</td></tr>';
         }
-        else if(weakness['weak4'] != null)
+        else if(SW['weak4'] != null)
         {
-            weakline = '<tr><td>Weak Against:</td><td>' + weakness['weak1'] + '</td><td>' +  weakness['weak2'] + '</td><td>' +  weakness['weak3'] + '</td><td>' +  weakness['weak4'] + '</td></tr>';
+            weakline = '<tr><td>Weak Against:</td><td>' + SW['weak1'] + '</td><td>' +  SW['weak2'] + '</td><td>' +  SW['weak3'] + '</td><td>' +  SW['weak4'] + '</td></tr>';
         }
-        else if(strength['weak3'] != null)
+        else if(SW['weak3'] != null)
         {
-            weakline = '<tr><td>Weak Against:</td><td>' + weakness['weak1'] + '</td><td>' +  weakness['weak2'] + '</td><td>' +  weakness['weak3'] + '</td></tr>';
+            weakline = '<tr><td>Weak Against:</td><td>' + SW['weak1'] + '</td><td>' +  SW['weak2'] + '</td><td>' +  SW['weak3'] + '</td></tr>';
         }
-        else if(strength['weak2'] != null)
+        else if(SW['weak2'] != null)
         {
-            weakline = '<tr><td>Weak Against:</td><td>' + weakness['weak1'] + '</td><td>' +  weakness['weak2'] + '</td></tr>';
+            weakline = '<tr><td>Weak Against:</td><td>' + SW['weak1'] + '</td><td>' +  SW['weak2'] + '</td></tr>';
         }
         else
         {
-            weakline = '<tr><td>Weak Against:</td><td>' + weakness['weak1'] + '</td></tr>';
+            weakline = '<tr><td>Weak Against:</td><td>' + SW['weak1'] + '</td></tr>';
         }
 
         tableBody += '<tr>'

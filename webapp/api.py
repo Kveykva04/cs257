@@ -89,7 +89,8 @@ def get_all_pokemon():
 
     names = []
     query = '''Select pokemon_type_stats.name
-                    FROM pokemon_type_stats'''
+                    FROM pokemon_type_stats
+                    ORDER BY pokemon_type_stats.name'''
     try:
         connection = get_connection()
         cursor = connection.cursor()

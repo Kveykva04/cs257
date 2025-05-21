@@ -214,8 +214,8 @@ def get_pokemon_by_generation(generation_number, is_legendary):
 
     ########
 
-    @api.route('/pokemon_strong_and_weak/<pokemon_name>')
-def get_pokemon_stats_by_name(pokemon_name):
+@api.route('/WeakAndStrong/<pokemon_name>')
+def get_pokemon_strength_and_weakness(pokemon_name):
     pokemon_by_name = []
     try:
         # Create a "cursor", which is an object with which you can iterate

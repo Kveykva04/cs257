@@ -42,6 +42,50 @@ def get_types():
 
     return json.dumps(types)
 
+@api.route('/WeakAndStrong/<pokemon_type>')
+def get_weaknesses_strengths(pokemon_type):
+    weaknesses = []
+    query = '''Select pokemon_type_stats.name, pokemon_weak.weak1, pokemon_weak.weak2, pokemon_weak.weak3, pokemon_weak.weak4, pokemon_weak.weak5
+                FROM pokemon_type_stats, pokemon_weak
+                WHERE pokemon_type_stats.type1 = %s
+                OR pokemon_type_stats.type2 = %s;'''
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, (pokemon_type))
+
+        # Iterate over the query results to produce the list of pokemon of a given type.
+        for row in cursor:
+            weaknesses.append({'name':row[0], 'weak1':row[1], 'weak2':row[2], 'weak3':row[3], 'weak4':row[4], 'weak5':row[5]})
+
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    strengths = []
+    query = '''Select pokemon_type_stats.name, pokemon_strong.strong1, pokemon_strong.strong2, pokemon_strong.strong3, pokemon_strong.strong4, pokemon_strong.strong5
+                FROM pokemon_type_stats, pokemon_strong
+                WHERE pokemon_type_stats.type1 = %s
+                OR pokemon_type_stats.type2 = %s;'''
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, (pokemon_type,))
+
+        # Iterate over the query results to produce the list of pokemon of a given type.
+        for row in cursor:
+            strengths.append({'name':row[0], 'strong1':row[1], 'strong2':row[2], 'strong3':row[3], 'strong4':row[4], 'strong5':row[5]})
+
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+
+    sAndw = {'weaknesses': weaknesses, 'strengths':strengths}
+    return json.dumps(sAndw)
+
 @api.route('/type/<pokemon_type>/[best={BEST}]')
 def get_pokemon_by_type(search_text, best):
     chosen_type = search_text

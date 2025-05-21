@@ -92,7 +92,7 @@ function onNameSelectionChanged() {
         type1Body += pokemon['Type1'];
         if(pokemon['Type2'] == null)
         {
-            type2Body += 'n/a\n'
+            type2Body += 'n/a\n';
         }
         else
         {
@@ -115,8 +115,96 @@ function onNameSelectionChanged() {
         }
     })
 
+    // let type = document.getElementById('pokemon_selector');
+    // if (!type) {
+    //     return;
+    // }
+    // let chosen_type = type.value; 
+
+    //.then(loadWeakAndStrong(chosen_type))
+
     .catch(function(error) {
         console.log(error);
     });
 }
 
+
+function loadWeakAndStrong(chosen_type) {
+    let newUrl = getAPIBaseURL() + '/WeakAndStrong/' + chosen_type;
+
+    // Send the request to the books API /types/ endpoint
+    fetch(newUrl, {method: 'get'})
+
+    // When the results come back, transform them from a JSON string into
+    // a Javascript object (in this case, a list of author dictionaries).
+    .then((response) => response.json())
+
+    // Once you have your list of author dictionaries, use it to build
+    // an HTML table displaying the author names and lifespan.
+    .then(function(sAndw) {
+        // Add the <option> elements to the <select> element
+        let tableBody = '';
+        let strongline = '';
+        let weakline = '';
+
+        let weakness = sAndw.weaknesses[0];
+        let strength = sAndw.strengths[0];
+        if(strength['strong5'] != null)
+        {
+            strongline = '<tr><td>Strong Against:</td><td>' + strength['strong1'] + '</td><td>' +  strength['strong2'] + '</td><td>' +  strength['strong3'] + '</td><td>' +  strength['strong4'] + '</td><td>' +  strength['strong5'] + '</td></tr>';
+        }
+        else if(strength['strong4'] != null)
+        {
+            strongline = '<tr><td>Strong Against:</td><td>' + strength['strong1'] + '</td><td>' +  strength['strong2'] + '</td><td>' +  strength['strong3'] + '</td><td>' +  strength['strong4'] + '</td></tr>';
+        }
+        else if(strength['strong3'] != null)
+        {
+            strongline = '<tr><td>Strong Against:</td><td>' + strength['strong1'] + '</td><td>' +  strength['strong2'] + '</td><td>' +  strength['strong3'] + '</td></tr>';
+        }
+        else if(strength['strong2'] != null)
+        {
+            strongline = '<tr><td>Strong Against:</td><td>' + strength['strong1'] + '</td><td>' +  strength['strong2'] + '</td></tr>';
+        }
+        else
+        {
+            strongline = '<tr><td>Strong Against:</td><td>' + strength['strong1'] + '</td></tr>';
+        }
+
+        if(weakness['weak5'] != null)
+        {
+            weakline = '<tr><td>Weak Against:</td><td>' + weakness['weak1'] + '</td><td>' +  weakness['weak2'] + '</td><td>' +  weakness['weak3'] + '</td><td>' +  weakness['weak4'] + '</td><td>' +  weakness['weak5'] + '</td></tr>';
+        }
+        else if(weakness['weak4'] != null)
+        {
+            weakline = '<tr><td>Weak Against:</td><td>' + weakness['weak1'] + '</td><td>' +  weakness['weak2'] + '</td><td>' +  weakness['weak3'] + '</td><td>' +  weakness['weak4'] + '</td></tr>';
+        }
+        else if(strength['weak3'] != null)
+        {
+            weakline = '<tr><td>Weak Against:</td><td>' + weakness['weak1'] + '</td><td>' +  weakness['weak2'] + '</td><td>' +  weakness['weak3'] + '</td></tr>';
+        }
+        else if(strength['weak2'] != null)
+        {
+            weakline = '<tr><td>Weak Against:</td><td>' + weakness['weak1'] + '</td><td>' +  weakness['weak2'] + '</td></tr>';
+        }
+        else
+        {
+            weakline = '<tr><td>Weak Against:</td><td>' + weakness['weak1'] + '</td></tr>';
+        }
+
+        tableBody += '<tr>'
+                        + strongline
+                        + weakline
+                        + '</tr>\n';
+
+        // Put the table body we just built inside the table that's already on the page.
+        let weakStrongTable = document.getElementById('weakness_and_strength_table');
+        if (weakStrongTable) {
+            weakStrongTable.innerHTML = tableBody;
+        }
+    })
+
+    // Log the error if anything went wrong during the fetch.
+    .catch(function(error) {
+        console.log(error);
+    });
+}

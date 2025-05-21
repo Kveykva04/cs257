@@ -16,8 +16,10 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
+DROP TABLE public.pokemon_weak;
 DROP TABLE public.pokemon_types;
 DROP TABLE public.pokemon_type_stats;
+DROP TABLE public.pokemon_strong;
 DROP TABLE public.pokemon_generation;
 SET default_tablespace = '';
 
@@ -31,6 +33,20 @@ CREATE TABLE public.pokemon_generation (
     name text,
     generation integer,
     is_legendary integer
+);
+
+
+--
+-- Name: pokemon_strong; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.pokemon_strong (
+    type text,
+    strong1 text,
+    strong2 text,
+    strong3 text,
+    strong4 text,
+    strong5 text
 );
 
 
@@ -59,6 +75,20 @@ CREATE TABLE public.pokemon_type_stats (
 CREATE TABLE public.pokemon_types (
     type_id integer,
     type_name text
+);
+
+
+--
+-- Name: pokemon_weak; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.pokemon_weak (
+    type text,
+    weak1 text,
+    weak2 text,
+    weak3 text,
+    weak4 text,
+    weak5 text
 );
 
 
@@ -868,6 +898,32 @@ Kartana	7	1
 Guzzlord	7	1
 Necrozma	7	1
 Magearna	7	1
+\.
+
+
+--
+-- Data for Name: pokemon_strong; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.pokemon_strong (type, strong1, strong2, strong3, strong4, strong5) FROM stdin;
+normal					
+fire	Grass	Ice	Bug	Steel	
+water	Fire	Ground	Rock		
+grass	Water	Ground	Rock		
+electric	Water	Flying			
+ice	Grass	Ground	Flying	Dragon	
+fighting	Normal	Ice	Rock	Dark	Steel
+poison	Grass	Fairy			
+ground	Fire	Electric	Poison	Rock	Steel
+flying	Grass	Fighting	Bug		
+psychic	Fighting	Poison			
+bug	Grass	Psychic	Dark		
+rock	Fire	Fighting	Flying	Bug	
+ghost	Psychic	Ghost			
+dragon	Dragon				
+dark	Psychic	Ghost			
+steel	Ice	Rock	Fairy		
+fairy	Fighting	Dragon	Dark		
 \.
 
 
@@ -1703,6 +1759,32 @@ COPY public.pokemon_types (type_id, type_name) FROM stdin;
 16	Dark
 17	Steel
 18	Fairy
+\.
+
+
+--
+-- Data for Name: pokemon_weak; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.pokemon_weak (type, weak1, weak2, weak3, weak4, weak5) FROM stdin;
+normal	Fighting				
+fire	Water	Rock			
+water	Grass	Electric			
+grass	Fire	Ice	Poison	Flying	Bug
+electric	Ground				
+ice	Fire	Fighting	Rock	Steel	
+fighting	Flying	Psychic	Fairy		
+poison	Ground	Psychic			
+ground	Water	Grass	Ice		
+flying	Electric	Ice	Rock		
+psychic	Bug	Ghost	Dark		
+bug	Fire	Flying	Rock		
+rock	Water	Grass	Fighting	Ground	Steel
+ghost	Ghost	Dark			
+dragon	Dragon	Fairy			
+dark	Fighting	Bug	Fairy		
+steel	Fire	Fighting	Ground		
+fairy	Poison	Steel			
 \.
 
 

@@ -113,15 +113,15 @@ function onNameSelectionChanged() {
         if (pokemonType2) {
             pokemonType2.innerHTML = type2Body;
         }
+
+        let type = document.getElementById('pokemon_selector');
+        if (!type) {
+            return;
+        }
+        let chosen_type = type.value; 
+
+        loadWeakAndStrong(chosen_type);
     })
-
-    // let type = document.getElementById('pokemon_selector');
-    // if (!type) {
-    //     return;
-    // }
-    // let chosen_type = type.value; 
-
-    //.then(loadWeakAndStrong(chosen_type))
 
     .catch(function(error) {
         console.log(error);
@@ -148,6 +148,8 @@ function loadWeakAndStrong(chosen_type) {
         let weakline = '';
 
         let SW = sAndw[0];
+        let removeStrong = -1;
+        let removeWeak = -1;
     
         if(SW['strong5'] != null)
         {

@@ -166,7 +166,7 @@ def get_pokemon_by_generation(generation_number, is_legendary):
     except Exception as e:
         print(e, file=sys.stderr)
 
-    return pokemon_by_generation
+    return json.dumps(pokemon_by_generation)
 
 
     ########
@@ -202,4 +202,4 @@ def get_pokemon_strength_and_weakness(pokemon_name):
     except Exception as e:
         print(e, file=sys.stderr)
 
-    return jsonify(pokemon_strength_and_weakness)
+    return json.dumps(pokemon_strength_and_weakness)

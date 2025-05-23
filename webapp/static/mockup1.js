@@ -148,9 +148,7 @@ function loadWeakAndStrong(chosen_type) {
         let weakline = '';
 
         let SW = sAndw[0];
-        let removeStrong = -1;
-        let removeWeak = -1;
-    
+
         if(SW['strong5'] != null)
         {
             strongline = '<tr><td>Strong Against:</td><td>' + SW['strong1'] + '</td><td>' +  SW['strong2'] + '</td><td>' +  SW['strong3'] + '</td><td>' +  SW['strong4'] + '</td><td>' +  SW['strong5'] + '</td></tr>';

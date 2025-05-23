@@ -29,12 +29,18 @@ ul.horizontal-navbar li a:hover {
     font-size: 24pt;
     background-color: #ee1515
     
-  }
-#white-navbar{
+}
+
+#search-navbar{
+    padding-top: 7pt;
+    font-size: 12pt;
+    float:right;
+}
+
+#home-navbar{
     padding-left: 5%;
     padding-right: 5%;
     float:left;
-    background-color: white
 }
 
 body {

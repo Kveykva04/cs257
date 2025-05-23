@@ -29,12 +29,18 @@ ul.horizontal-navbar li a:hover {
     font-size: 24pt;
     background-color: #ee1515
     
-  }
-#white-navbar{
+}
+
+  #search-navbar{
+    padding-top: 7pt;
+    font-size: 12pt;
+    float:right;
+}
+
+#home-navbar{
     padding-left: 5%;
     padding-right: 5%;
     float:left;
-    background-color: white
 }
 
 body {
@@ -86,8 +92,8 @@ body {
 }
 
 .poke-image {
-    width: 350px;        
-    height: auto;         
+    width: 300px;        
+    height: 300px;         
     margin-left: 100px;   
     margin-top: 10px;     
 }
@@ -95,14 +101,15 @@ body {
 /* smaller rectangle */
 .type_rectangle {
     height: 70px;
-    width: 60%;
-    
+    width: 40%;
+    padding-left: 22.5%;
 }
 
 /* absol and chart next to eachother */
 .side_by_side{
+    padding-left: 15%;
     display: flex;
-    gap: 400px;
+    gap: 200px;
 }
 
 .base_stats_font {
@@ -146,6 +153,7 @@ table, td, th {
 
 /* make things be able to be next to eachother */
 .weakness_and_gender_side{
+    padding-left: 20%;
     display: flex;
-    gap:400px;
+    gap: 200px;
 }

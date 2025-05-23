@@ -28,11 +28,17 @@ ul.horizontal-navbar li a:hover {
     background-color: #ee1515
     
   }
-#white-navbar{
+
+#search-navbar{
+    padding-top: 7pt;
+    font-size: 12pt;
+    float:right;
+}
+
+#home-navbar{
     padding-left: 5%;
     padding-right: 5%;
     float:left;
-    background-color: white
 }
 
 body {
@@ -45,13 +51,12 @@ body {
     align-items: center;
     height: 70px;
 }
-.sw-rectangle {
+
+/* make things be able to be next to eachother */
+.strength_weakness_side{
+    padding-left: 20%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-    width: 40%; 
-    background-color: #f1f1f1; 
+    gap: 200px;
 }
 
 .name {
@@ -75,29 +80,32 @@ body {
 }
 
 .poke-image {
-    width: 350px;        
-    height: auto;         
+    width: 300px;        
+    height: 300px;         
     margin-left: 100px;   
     margin-top: 10px;     
 }
 
+/* smaller rectangle */
 .type_rectangle {
-    display: flex;
     height: 70px;
-    width: 60%;
-    padding-top: 10px;
+    width: 40%;
+    padding-left: 22.5%;
 }
 
+/* absol and chart next to eachother */
 .side_by_side{
+    padding-left: 15%;
     display: flex;
-    gap: 400px;
+    gap: 200px;
 }
 
 .type-side_by_side{
     display: flex;
     gap: 0px;
-    padding-left: 20%;
-    padding-right: 5%;
+    padding-left: 5%;
+    padding-right: 15%;
+    padding-top: 1%;
 }
 
 .base_stats_font {

@@ -1,0 +1,802 @@
+name,classfication,percentage_male
+Bulbasaur,Seed Pokémon,88.1
+Ivysaur,Seed Pokémon,88.1
+Venusaur,Seed Pokémon,88.1
+Charmander,Lizard Pokémon,88.1
+Charmeleon,Flame Pokémon,88.1
+Charizard,Flame Pokémon,88.1
+Squirtle,Tiny Turtle Pokémon,88.1
+Wartortle,Turtle Pokémon,88.1
+Blastoise,Shellfish Pokémon,88.1
+Caterpie,Worm Pokémon,50
+Metapod,Cocoon Pokémon,50
+Butterfree,Butterfly Pokémon,50
+Weedle,Hairy Pokémon,50
+Kakuna,Cocoon Pokémon,50
+Beedrill,Poison Bee Pokémon,50
+Pidgey,Tiny Bird Pokémon,50
+Pidgeotto,Bird Pokémon,50
+Pidgeot,Bird Pokémon,50
+Rattata,Mouse Pokémon,50
+Raticate,Mouse Pokémon,50
+Spearow,Tiny Bird Pokémon,50
+Fearow,Beak Pokémon,50
+Ekans,Snake Pokémon,50
+Arbok,Cobra Pokémon,50
+Pikachu,Mouse Pokémon,50
+Raichu,Mouse Pokémon,50
+Sandshrew,Mouse Pokémon,50
+Sandslash,Mouse Pokémon,50
+Nidoran♀,Poison Pin Pokémon,0
+Nidorina,Poison Pin Pokémon,0
+Nidoqueen,Drill Pokémon,0
+Nidoran♂,Poison Pin Pokémon,100
+Nidorino,Poison Pin Pokémon,100
+Nidoking,Drill Pokémon,100
+Clefairy,Fairy Pokémon,24.6
+Clefable,Fairy Pokémon,24.6
+Vulpix,Fox Pokémon,24.6
+Ninetales,Fox Pokémon,24.6
+Jigglypuff,Balloon Pokémon,24.6
+Wigglytuff,Balloon Pokémon,24.6
+Zubat,Bat Pokémon,50
+Golbat,Bat Pokémon,50
+Oddish,Weed Pokémon,50
+Gloom,Weed Pokémon,50
+Vileplume,Flower Pokémon,50
+Paras,Mushroom Pokémon,50
+Parasect,Mushroom Pokémon,50
+Venonat,Insect Pokémon,50
+Venomoth,Poison Moth Pokémon,50
+Diglett,Mole Pokémon,50
+Dugtrio,Mole Pokémon,50
+Meowth,Scratch Cat Pokémon,50
+Persian,Classy Cat Pokémon,50
+Psyduck,Duck Pokémon,50
+Golduck,Duck Pokémon,50
+Mankey,Pig Monkey Pokémon,50
+Primeape,Pig Monkey Pokémon,50
+Growlithe,Puppy Pokémon,75.4
+Arcanine,Legendary Pokémon,75.4
+Poliwag,Tadpole Pokémon,50
+Poliwhirl,Tadpole Pokémon,50
+Poliwrath,Tadpole Pokémon,50
+Abra,Psi Pokémon,75.4
+Kadabra,Psi Pokémon,75.4
+Alakazam,Psi Pokémon,75.4
+Machop,Superpower Pokémon,75.4
+Machoke,Superpower Pokémon,75.4
+Machamp,Superpower Pokémon,75.4
+Bellsprout,Flower Pokémon,50
+Weepinbell,Flycatcher Pokémon,50
+Victreebel,Flycatcher Pokémon,50
+Tentacool,Jellyfish Pokémon,50
+Tentacruel,Jellyfish Pokémon,50
+Geodude,Rock Pokémon,50
+Graveler,Rock Pokémon,50
+Golem,Megaton Pokémon,50
+Ponyta,Fire Horse Pokémon,50
+Rapidash,Fire Horse Pokémon,50
+Slowpoke,Dopey Pokémon,50
+Slowbro,Hermit Crab Pokémon,50
+Magnemite,Magnet Pokémon,
+Magneton,Magnet Pokémon,
+Farfetch'd,Wild Duck Pokémon,50
+Doduo,Twin Bird Pokémon,50
+Dodrio,Triple Bird Pokémon,50
+Seel,Sea Lion Pokémon,50
+Dewgong,Sea Lion Pokémon,50
+Grimer,Sludge Pokémon,50
+Muk,Sludge Pokémon,50
+Shellder,Bivalve Pokémon,50
+Cloyster,Bivalve Pokémon,50
+Gastly,Gas Pokémon,50
+Haunter,Gas Pokémon,50
+Gengar,Shadow Pokémon,50
+Onix,Rock Snake Pokémon,50
+Drowzee,Hypnosis Pokémon,50
+Hypno,Hypnosis Pokémon,50
+Krabby,River Crab Pokémon,50
+Kingler,Pincer Pokémon,50
+Voltorb,Ball Pokémon,
+Electrode,Ball Pokémon,
+Exeggcute,Egg Pokémon,50
+Exeggutor,Coconut Pokémon,50
+Cubone,Lonely Pokémon,50
+Marowak,Bone Keeper Pokémon,50
+Hitmonlee,Kicking Pokémon,100
+Hitmonchan,Punching Pokémon,100
+Lickitung,Licking Pokémon,50
+Koffing,Poison Gas Pokémon,50
+Weezing,Poison Gas Pokémon,50
+Rhyhorn,Spikes Pokémon,50
+Rhydon,Drill Pokémon,50
+Chansey,Egg Pokémon,0
+Tangela,Vine Pokémon,50
+Kangaskhan,Parent Pokémon,0
+Horsea,Dragon Pokémon,50
+Seadra,Dragon Pokémon,50
+Goldeen,Goldfish Pokémon,50
+Seaking,Goldfish Pokémon,50
+Staryu,Starshape Pokémon,
+Starmie,Mysterious Pokémon,
+Mr. Mime,Barrier Pokémon,50
+Scyther,Mantis Pokémon,50
+Jynx,Humanshape Pokémon,0
+Electabuzz,Electric Pokémon,75.4
+Magmar,Spitfire Pokémon,75.4
+Pinsir,Stagbeetle Pokémon,50
+Tauros,Wild Bull Pokémon,100
+Magikarp,Fish Pokémon,50
+Gyarados,Atrocious Pokémon,50
+Lapras,Transport Pokémon,50
+Ditto,Transform Pokémon,
+Eevee,Evolution Pokémon,88.1
+Vaporeon,Bubble Jet Pokémon,88.1
+Jolteon,Lightning Pokémon,88.1
+Flareon,Flame Pokémon,88.1
+Porygon,Virtual Pokémon,
+Omanyte,Spiral Pokémon,88.1
+Omastar,Spiral Pokémon,88.1
+Kabuto,Shellfish Pokémon,88.1
+Kabutops,Shellfish Pokémon,88.1
+Aerodactyl,Fossil Pokémon,88.1
+Snorlax,Sleeping Pokémon,88.1
+Articuno,Freeze Pokémon,
+Zapdos,Electric Pokémon,
+Moltres,Flame Pokémon,
+Dratini,Dragon Pokémon,50
+Dragonair,Dragon Pokémon,50
+Dragonite,Dragon Pokémon,50
+Mewtwo,Genetic Pokémon,
+Mew,New Species Pokémon,
+Chikorita,Leaf Pokémon,88.1
+Bayleef,Leaf Pokémon,88.1
+Meganium,Herb Pokémon,88.1
+Cyndaquil,Fire Mouse Pokémon,88.1
+Quilava,Volcano Pokémon,88.1
+Typhlosion,Volcano Pokémon,88.1
+Totodile,Big Jaw Pokémon,88.1
+Croconaw,Big Jaw Pokémon,88.1
+Feraligatr,Big Jaw Pokémon,88.1
+Sentret,Scout Pokémon,50
+Furret,Long Body Pokémon,50
+Hoothoot,Owl Pokémon,50
+Noctowl,Owl Pokémon,50
+Ledyba,Five Star Pokémon,50
+Ledian,Five Star Pokémon,50
+Spinarak,String Spit Pokémon,50
+Ariados,Long Leg Pokémon,50
+Crobat,Bat Pokémon,50
+Chinchou,Angler Pokémon,50
+Lanturn,Light Pokémon,50
+Pichu,Tiny Mouse Pokémon,50
+Cleffa,Star Shape Pokémon,24.6
+Igglybuff,Balloon Pokémon,24.6
+Togepi,Spike Ball Pokémon,88.1
+Togetic,Happiness Pokémon,88.1
+Natu,Little Bird Pokémon,50
+Xatu,Mystic Pokémon,50
+Mareep,Wool Pokémon,50
+Flaaffy,Wool Pokémon,50
+Ampharos,Light Pokémon,50
+Bellossom,Flower Pokémon,50
+Marill,Aquamouse Pokémon,50
+Azumarill,Aquarabbit Pokémon,50
+Sudowoodo,Imitation Pokémon,50
+Politoed,Frog Pokémon,50
+Hoppip,Cottonweed Pokémon,50
+Skiploom,Cottonweed Pokémon,50
+Jumpluff,Cottonweed Pokémon,50
+Aipom,Long Tail Pokémon,50
+Sunkern,Seed Pokémon,50
+Sunflora,Sun Pokémon,50
+Yanma,Clear Wing Pokémon,50
+Wooper,Water Fish Pokémon,50
+Quagsire,Water Fish Pokémon,50
+Espeon,Sun Pokémon,88.1
+Umbreon,Moonlight Pokémon,88.1
+Murkrow,Darkness Pokémon,50
+Slowking,Royal Pokémon,50
+Misdreavus,Screech Pokémon,50
+Unown,Symbol Pokémon,
+Wobbuffet,Patient Pokémon,50
+Girafarig,Long Neck Pokémon,50
+Pineco,Bagworm Pokémon,50
+Forretress,Bagworm Pokémon,50
+Dunsparce,Land Snake Pokémon,50
+Gligar,Flyscorpion Pokémon,50
+Steelix,Iron Snake Pokémon,50
+Snubbull,Fairy Pokémon,24.6
+Granbull,Fairy Pokémon,24.6
+Qwilfish,Balloon Pokémon,50
+Scizor,Pincer Pokémon,50
+Shuckle,Mold Pokémon,50
+Heracross,Singlehorn Pokémon,50
+Sneasel,Sharp Claw Pokémon,50
+Teddiursa,Little Bear Pokémon,50
+Ursaring,Hibernator Pokémon,50
+Slugma,Lava Pokémon,50
+Magcargo,Lava Pokémon,50
+Swinub,Pig Pokémon,50
+Piloswine,Swine Pokémon,50
+Corsola,Coral Pokémon,24.6
+Remoraid,Jet Pokémon,50
+Octillery,Jet Pokémon,50
+Delibird,Delivery Pokémon,50
+Mantine,Kite Pokémon,50
+Skarmory,Armor Bird Pokémon,50
+Houndour,Dark Pokémon,50
+Houndoom,Dark Pokémon,50
+Kingdra,Dragon Pokémon,50
+Phanpy,Long Nose Pokémon,50
+Donphan,Armor Pokémon,50
+Porygon2,Virtual Pokémon,
+Stantler,Big Horn Pokémon,50
+Smeargle,Painter Pokémon,50
+Tyrogue,Scuffle Pokémon,100
+Hitmontop,Handstand Pokémon,100
+Smoochum,Kiss Pokémon,0
+Elekid,Electric Pokémon,75.4
+Magby,Live Coal Pokémon,75.4
+Miltank,Milk Cow Pokémon,0
+Blissey,Happiness Pokémon,0
+Raikou,Thunder Pokémon,
+Entei,Volcano Pokémon,
+Suicune,Aurora Pokémon,
+Larvitar,Rock Skin Pokémon,50
+Pupitar,Hard Shell Pokémon,50
+Tyranitar,Armor Pokémon,50
+Lugia,Diving Pokémon,
+Ho-Oh,Rainbow Pokémon,
+Celebi,Time Travel Pokémon,
+Treecko,Wood Gecko Pokémon,88.1
+Grovyle,Wood Gecko Pokémon,88.1
+Sceptile,Forest Pokémon,88.1
+Torchic,Chick Pokémon,88.1
+Combusken,Young Fowl Pokémon,88.1
+Blaziken,Blaze Pokémon,88.1
+Mudkip,Mud Fish Pokémon,88.1
+Marshtomp,Mud Fish Pokémon,88.1
+Swampert,Mud Fish Pokémon,88.1
+Poochyena,Bite Pokémon,50
+Mightyena,Bite Pokémon,50
+Zigzagoon,Tiny Racoon Pokémon,50
+Linoone,Rush Pokémon,50
+Wurmple,Worm Pokémon,50
+Silcoon,Cocoon Pokémon,50
+Beautifly,Butterfly Pokémon,50
+Cascoon,Cocoon Pokémon,50
+Dustox,Poison Moth Pokémon,50
+Lotad,Water Weed Pokémon,50
+Lombre,Jolly Pokémon,50
+Ludicolo,Carefree Pokémon,50
+Seedot,Acorn Pokémon,50
+Nuzleaf,Wily Pokémon,50
+Shiftry,Wickid Pokémon,50
+Taillow,TinySwallow Pokémon,50
+Swellow,Swallow Pokémon,50
+Wingull,Seagull Pokémon,50
+Pelipper,Water Bird Pokémon,50
+Ralts,Feeling Pokémon,50
+Kirlia,Emotion Pokémon,50
+Gardevoir,Embrace Pokémon,50
+Surskit,Pond Skater Pokémon,50
+Masquerain,Eyeball Pokémon,50
+Shroomish,Mushroom Pokémon,50
+Breloom,Mushroom Pokémon,50
+Slakoth,Slacker Pokémon,50
+Vigoroth,Wild Monkey Pokémon,50
+Slaking,Lazy Pokémon,50
+Nincada,Trainee Pokémon,50
+Ninjask,Ninja Pokémon,50
+Shedinja,Shed Pokémon,
+Whismur,Whisper Pokémon,50
+Loudred,Big Voice Pokémon,50
+Exploud,Loud Noise Pokémon,50
+Makuhita,Guts Pokémon,75.4
+Hariyama,Arm Thrust Pokémon,75.4
+Azurill,Polka Dot Pokémon,24.6
+Nosepass,Compass Pokémon,50
+Skitty,Kitten Pokémon,24.6
+Delcatty,Prim Pokémon,24.6
+Sableye,Darkness Pokémon,50
+Mawile,Deceiver Pokémon,50
+Aron,Iron Armor Pokémon,50
+Lairon,Iron Armor Pokémon,50
+Aggron,Iron Armor Pokémon,50
+Meditite,Meditate Pokémon,50
+Medicham,Meditate Pokémon,50
+Electrike,Lightning Pokémon,50
+Manectric,Discharge Pokémon,50
+Plusle,Cheering Pokémon,50
+Minun,Cheering Pokémon,50
+Volbeat,Firefly Pokémon,100
+Illumise,Firefly Pokémon,0
+Roselia,Thorn Pokémon,50
+Gulpin,Stomach Pokémon,50
+Swalot,Poison Bag Pokémon,50
+Carvanha,Savage Pokémon,50
+Sharpedo,Brutal Pokémon,50
+Wailmer,Ball Whale Pokémon,50
+Wailord,Float Whale Pokémon,50
+Numel,Numb Pokémon,50
+Camerupt,Eruption Pokémon,50
+Torkoal,Coal Pokémon,50
+Spoink,Bounce Pokémon,50
+Grumpig,Manipulate Pokémon,50
+Spinda,Spot Panda Pokémon,50
+Trapinch,Ant Pit Pokémon,50
+Vibrava,Vibration Pokémon,50
+Flygon,Mystic Pokémon,50
+Cacnea,Cactus Pokémon,50
+Cacturne,Scarecrow Pokémon,50
+Swablu,Cotton Bird Pokémon,50
+Altaria,Humming Pokémon,50
+Zangoose,Cat Ferret Pokémon,50
+Seviper,Fang Snake Pokémon,50
+Lunatone,Meteorite Pokémon,
+Solrock,Meteorite Pokémon,
+Barboach,Whiskers Pokémon,50
+Whiscash,Whiskers Pokémon,50
+Corphish,Ruffian Pokémon,50
+Crawdaunt,Rogue Pokémon,50
+Baltoy,Clay Doll Pokémon,
+Claydol,Clay Doll Pokémon,
+Lileep,Sea Lily Pokémon,88.1
+Cradily,Barnacle Pokémon,88.1
+Anorith,Old Shrimp Pokémon,88.1
+Armaldo,Plate Pokémon,88.1
+Feebas,Fish Pokémon,50
+Milotic,Tender Pokémon,50
+Castform,Weather Pokémon,50
+Kecleon,Color Swap Pokémon,50
+Shuppet,Puppet Pokémon,50
+Banette,Marionette Pokémon,50
+Duskull,Requiem Pokémon,50
+Dusclops,Beckon Pokémon,50
+Tropius,Fruit Pokémon,50
+Chimecho,Wind Chime Pokémon,50
+Absol,Disaster Pokémon,50
+Wynaut,Bright Pokémon,50
+Snorunt,Snow Hat Pokémon,50
+Glalie,Face Pokémon,50
+Spheal,Clap Pokémon,50
+Sealeo,Ball Roll Pokémon,50
+Walrein,Ice Break Pokémon,50
+Clamperl,Bivalve Pokémon,50
+Huntail,Deep Sea Pokémon,50
+Gorebyss,South Sea Pokémon,50
+Relicanth,Longevity Pokémon,88.1
+Luvdisc,Rendezvous Pokémon,24.6
+Bagon,Rock Head Pokémon,50
+Shelgon,Endurance Pokémon,50
+Salamence,Dragon Pokémon,50
+Beldum,Iron Ball Pokémon,
+Metang,Iron Claw Pokémon,
+Metagross,Iron Leg Pokémon,
+Regirock,Rock Peak Pokémon,
+Regice,Iceberg Pokémon,
+Registeel,Iron Pokémon,
+Latias,Eon Pokémon,0
+Latios,Eon Pokémon,100
+Kyogre,Sea Basin Pokémon,
+Groudon,Continent Pokémon,
+Rayquaza,Sky High Pokémon,
+Jirachi,Wish Pokémon,
+Deoxys,DNA Pokémon,
+Turtwig,Tiny Leaf Pokémon,88.1
+Grotle,Grove Pokémon,88.1
+Torterra,Continent Pokémon,88.1
+Chimchar,Chimp Pokémon,88.1
+Monferno,Playful Pokémon,88.1
+Infernape,Flame Pokémon,88.1
+Piplup,Penguin Pokémon,88.1
+Prinplup,Penguin Pokémon,88.1
+Empoleon,Emperor Pokémon,88.1
+Starly,Starling Pokémon,50
+Staravia,Starling Pokémon,50
+Staraptor,Predator Pokémon,50
+Bidoof,Plump Mouse Pokémon,50
+Bibarel,Beaver Pokémon,50
+Kricketot,Cricket Pokémon,50
+Kricketune,Cricket Pokémon,50
+Shinx,Flash Pokémon,50
+Luxio,Spark Pokémon,50
+Luxray,Gleam Eyes Pokémon,50
+Budew,Bud Pokémon,50
+Roserade,Bouquet Pokémon,50
+Cranidos,Head Butt Pokémon,88.1
+Rampardos,Head Butt Pokémon,88.1
+Shieldon,Shield Pokémon,88.1
+Bastiodon,Shield Pokémon,88.1
+Burmy,Bagworm Pokémon,50
+Wormadam,Bagworm Pokémon,0
+Mothim,Moth Pokémon,100
+Combee,Tiny Bee Pokémon,88.1
+Vespiquen,Beehive Pokémon,0
+Pachirisu,EleSquirrel Pokémon,50
+Buizel,Sea Weasel Pokémon,50
+Floatzel,Sea Weasel Pokémon,50
+Cherubi,Cherry Pokémon,50
+Cherrim,Blossom Pokémon,50
+Shellos,Sea Slug Pokémon,50
+Gastrodon,Sea Slug Pokémon,50
+Ambipom,Long Tail Pokémon,50
+Drifloon,Balloon Pokémon,50
+Drifblim,Blimp Pokémon,50
+Buneary,Rabbit Pokémon,50
+Lopunny,Rabbit Pokémon,50
+Mismagius,Magical Pokémon,50
+Honchkrow,Big Boss Pokémon,50
+Glameow,Catty Pokémon,24.6
+Purugly,Tiger Cat Pokémon,24.6
+Chingling,Bell Pokémon,50
+Stunky,Skunk Pokémon,50
+Skuntank,Skunk Pokémon,50
+Bronzor,Bronze Pokémon,
+Bronzong,Bronze Bell Pokémon,
+Bonsly,Bonsai Pokémon,50
+Mime Jr.,Mime Pokémon,50
+Happiny,Playhouse Pokémon,0
+Chatot,Music Note Pokémon,50
+Spiritomb,Forbidden Pokémon,50
+Gible,Land Shark Pokémon,50
+Gabite,Cave Pokémon,50
+Garchomp,Mach Pokémon,50
+Munchlax,Big Eater Pokémon,88.1
+Riolu,Emanation Pokémon,88.1
+Lucario,Aura Pokémon,88.1
+Hippopotas,Hippo Pokémon,50
+Hippowdon,Heavyweight Pokémon,50
+Skorupi,Scorpion Pokémon,50
+Drapion,Ogre Scorp Pokémon,50
+Croagunk,Toxic Mouth Pokémon,50
+Toxicroak,Toxic Mouth Pokémon,50
+Carnivine,Bug Catcher Pokémon,50
+Finneon,Wing Fish Pokémon,50
+Lumineon,Neon Pokémon,50
+Mantyke,Kite Pokémon,50
+Snover,Frosted Tree Pokémon,50
+Abomasnow,Frosted Tree Pokémon,50
+Weavile,Sharp Claw Pokémon,50
+Magnezone,Magnet Area Pokémon,
+Lickilicky,Licking Pokémon,50
+Rhyperior,Drill Pokémon,50
+Tangrowth,Vine Pokémon,50
+Electivire,Thunderbolt Pokémon,75.4
+Magmortar,Blast Pokémon,75.4
+Togekiss,Jubilee Pokémon,88.1
+Yanmega,Ogre Darner Pokémon,50
+Leafeon,Verdant Pokémon,88.1
+Glaceon,Fresh Snow Pokémon,88.1
+Gliscor,Fang Scorp Pokémon,50
+Mamoswine,Twin Tusk Pokémon,50
+Porygon-Z,Virtual Pokémon,
+Gallade,Blade Pokémon,100
+Probopass,Compass Pokémon,50
+Dusknoir,Gripper Pokémon,50
+Froslass,Snow Land Pokémon,0
+Rotom,Plasma Pokémon,
+Uxie,Knowledge Pokémon,
+Mesprit,Emotion Pokémon,
+Azelf,Willpower Pokémon,
+Dialga,Temporal Pokémon,
+Palkia,Spatial Pokémon,
+Heatran,Lava Dome Pokémon,50
+Regigigas,Colossal Pokémon,
+Giratina,Renegade Pokémon,
+Cresselia,Lunar Pokémon,0
+Phione,Sea Drifter Pokémon,
+Manaphy,Seafaring Pokémon,
+Darkrai,Pitch-Black Pokémon,
+Shaymin,Gratitude Pokémon,
+Arceus,Alpha Pokémon,
+Victini,Victory Pokémon,
+Snivy,Grass Snake Pokémon,88.1
+Servine,Grass Snake Pokémon,88.1
+Serperior,Regal Pokémon,88.1
+Tepig,Fire Pig Pokémon,88.1
+Pignite,Fire Pig Pokémon,88.1
+Emboar,Mega Fire Pig Pokémon,88.1
+Oshawott,Sea Otter Pokémon,88.1
+Dewott,Discipline Pokémon,88.1
+Samurott,Formidable Pokémon,88.1
+Patrat,Scout Pokémon,50
+Watchog,Lookout Pokémon,50
+Lillipup,Puppy Pokémon,50
+Herdier,Loyal Dog Pokémon,50
+Stoutland,Big-Hearted Pokémon,50
+Purrloin,Devious Pokémon,50
+Liepard,Cruel Pokémon,50
+Pansage,Grass Monkey Pokémon,88.1
+Simisage,Thorn Monkey Pokémon,88.1
+Pansear,High Temp Pokémon,88.1
+Simisear,Ember Pokémon,88.1
+Panpour,Spray Pokémon,88.1
+Simipour,Geyser Pokémon,88.1
+Munna,Dream Eater Pokémon,50
+Musharna,Drowsing Pokémon,50
+Pidove,Tiny Pigeon Pokémon,50
+Tranquill,Wild Pigeon Pokémon,50
+Unfezant,Proud Pokémon,50
+Blitzle,Electrified Pokémon,50
+Zebstrika,Thunderbolt Pokémon,50
+Roggenrola,Mantle Pokémon,50
+Boldore,Ore Pokémon,50
+Gigalith,Compressed Pokémon,50
+Woobat,Bat Pokémon,50
+Swoobat,Courting Pokémon,50
+Drilbur,Mole Pokémon,50
+Excadrill,Subterrene Pokémon,50
+Audino,Hearing Pokémon,50
+Timburr,Muscular Pokémon,75.4
+Gurdurr,Muscular Pokémon,75.4
+Conkeldurr,Muscular Pokémon,75.4
+Tympole,Tadpole Pokémon,50
+Palpitoad,Vibration Pokémon,50
+Seismitoad,Vibration Pokémon,50
+Throh,Judo Pokémon,100
+Sawk,Karate Pokémon,100
+Sewaddle,Sewing Pokémon,50
+Swadloon,Leaf-Wrapped Pokémon,50
+Leavanny,Nurturing Pokémon,50
+Venipede,Centipede Pokémon,50
+Whirlipede,Curlipede Pokémon,50
+Scolipede,Megapede Pokémon,50
+Cottonee,Cotton Puff Pokémon,50
+Whimsicott,Windveiled Pokémon,50
+Petilil,Bulb Pokémon,0
+Lilligant,Flowering Pokémon,0
+Basculin,Hostile Pokémon,50
+Sandile,Desert Croc Pokémon,50
+Krokorok,Desert Croc Pokémon,50
+Krookodile,Intimidation Pokémon,50
+Darumaka,Zen Charm Pokémon,50
+Darmanitan,Blazing Pokémon,50
+Maractus,Cactus Pokémon,50
+Dwebble,Rock Inn Pokémon,50
+Crustle,Stone Home Pokémon,50
+Scraggy,Shedding Pokémon,50
+Scrafty,Hoodlum Pokémon,50
+Sigilyph,Avianoid Pokémon,50
+Yamask,Spirit Pokémon,50
+Cofagrigus,Coffin Pokémon,50
+Tirtouga,Prototurtle Pokémon,88.1
+Carracosta,Prototurtle Pokémon,88.1
+Archen,First Bird Pokémon,88.1
+Archeops,First Bird Pokémon,88.1
+Trubbish,Trash Bag Pokémon,50
+Garbodor,Trash Heap Pokémon,50
+Zorua,Tricky Fox Pokémon,88.1
+Zoroark,Illusion Fox Pokémon,88.1
+Minccino,Chinchilla Pokémon,24.6
+Cinccino,Scarf Pokémon,24.6
+Gothita,Fixation Pokémon,24.6
+Gothorita,Manipulate Pokémon,24.6
+Gothitelle,Astral Body Pokémon,24.6
+Solosis,Cell Pokémon,50
+Duosion,Mitosis Pokémon,50
+Reuniclus,Multiplying Pokémon,50
+Ducklett,Water Bird Pokémon,50
+Swanna,White Bird Pokémon,50
+Vanillite,Fresh Snow Pokémon,50
+Vanillish,Icy Snow Pokémon,50
+Vanilluxe,Snowstorm Pokémon,50
+Deerling,Season Pokémon,50
+Sawsbuck,Season Pokémon,50
+Emolga,Sky Squirrel Pokémon,50
+Karrablast,Clamping Pokémon,50
+Escavalier,Cavalry Pokémon,50
+Foongus,Mushroom Pokémon,50
+Amoonguss,Mushroom Pokémon,50
+Frillish,Floating Pokémon,50
+Jellicent,Floating Pokémon,50
+Alomomola,Caring Pokémon,50
+Joltik,Attaching Pokémon,50
+Galvantula,EleSpider Pokémon,50
+Ferroseed,Thorn Seed Pokémon,50
+Ferrothorn,Thorn Pod Pokémon,50
+Klink,Gear Pokémon,
+Klang,Gear Pokémon,
+Klinklang,Gear Pokémon,
+Tynamo,EleFish Pokémon,50
+Eelektrik,EleFish Pokémon,50
+Eelektross,EleFish Pokémon,50
+Elgyem,Cerebral Pokémon,50
+Beheeyem,Cerebral Pokémon,50
+Litwick,Candle Pokémon,50
+Lampent,Lamp Pokémon,50
+Chandelure,Luring Pokémon,50
+Axew,Tusk Pokémon,50
+Fraxure,Axe Jaw Pokémon,50
+Haxorus,Axe Jaw Pokémon,50
+Cubchoo,Chill Pokémon,50
+Beartic,Freezing Pokémon,50
+Cryogonal,Crystallizing Pokémon,
+Shelmet,Snail Pokémon,50
+Accelgor,Shell Out Pokémon,50
+Stunfisk,Trap Pokémon,50
+Mienfoo,Martial Arts Pokémon,50
+Mienshao,Martial Arts Pokémon,50
+Druddigon,Cave Pokémon,50
+Golett,Automaton Pokémon,
+Golurk,Automaton Pokémon,
+Pawniard,Sharp Blade Pokémon,50
+Bisharp,Sword Blade Pokémon,50
+Bouffalant,Bash Buffalo Pokémon,50
+Rufflet,Eaglet Pokémon,100
+Braviary,Valiant Pokémon,100
+Vullaby,Diapered Pokémon,0
+Mandibuzz,Bone Vulture Pokémon,0
+Heatmor,Anteater Pokémon,50
+Durant,Iron Ant Pokémon,50
+Deino,Irate Pokémon,50
+Zweilous,Hostile Pokémon,50
+Hydreigon,Brutal Pokémon,50
+Larvesta,Torch Pokémon,50
+Volcarona,Sun Pokémon,50
+Cobalion,Iron Will Pokémon,
+Terrakion,Cavern Pokémon,
+Virizion,Grassland Pokémon,
+Tornadus,Cyclone Pokémon,100
+Thundurus,Bolt Strike Pokémon,100
+Reshiram,Vast White Pokémon,
+Zekrom,Deep Black Pokémon,
+Landorus,Abundance Pokémon,100
+Kyurem,Boundary Pokémon,
+Keldeo,Colt Pokémon,
+Meloetta,Melody Pokémon,
+Genesect,Paleozoic Pokémon,
+Chespin,Spiky Nut Pokémon,88.1
+Quilladin,Spiny Armor Pokémon,88.1
+Chesnaught,Spiny Armor Pokémon,88.1
+Fennekin,Fox Pokémon,88.1
+Braixen,Fox Pokémon,88.1
+Delphox,Fox Pokémon,88.1
+Froakie,Bubble Frog Pokémon,88.1
+Frogadier,Bubble Frog Pokémon,88.1
+Greninja,Ninja Pokémon,88.1
+Bunnelby,Digging Pokémon,50
+Diggersby,Digging Pokémon,50
+Fletchling,Tiny Robin Pokémon,50
+Fletchinder,Ember Pokémon,50
+Talonflame,Scorching Pokémon,50
+Scatterbug,Scatterdust Pokémon,50
+Spewpa,Scatterdust Pokémon,50
+Vivillon,Scale Pokémon,50
+Litleo,Lion Cub Pokémon,11.2
+Pyroar,Royal Pokémon,11.2
+Flabébé,Single Bloom Pokémon,0
+Floette,Fairy Pokémon,0
+Florges,Garden Pokémon,0
+Skiddo,Mount Pokémon,50
+Gogoat,Mount Pokémon,50
+Pancham,Playful Pokémon,50
+Pangoro,Daunting Pokémon,50
+Furfrou,Poodle Pokémon,50
+Espurr,Restraint Pokémon,50
+Meowstic,Constraint Pokémon,50
+Honedge,Sword Pokémon,50
+Doublade,Sword Pokémon,50
+Aegislash,Royal Sword Pokémon,50
+Spritzee,Perfume Pokémon,50
+Aromatisse,Fragrance Pokémon,50
+Swirlix,Cotton Candy Pokémon,50
+Slurpuff,Meringue Pokémon,50
+Inkay,Revolving Pokémon,50
+Malamar,Overturning Pokémon,50
+Binacle,Two-Handed Pokémon,50
+Barbaracle,Collective Pokémon,50
+Skrelp,Mock Kelp Pokémon,50
+Dragalge,Mock Kelp Pokémon,50
+Clauncher,Water Gun Pokémon,50
+Clawitzer,Howitzer Pokémon,50
+Helioptile,Generator Pokémon,50
+Heliolisk,Generator Pokémon,50
+Tyrunt,Royal Heir Pokémon,88.1
+Tyrantrum,Despot Pokémon,88.1
+Amaura,Tundra Pokémon,88.1
+Aurorus,Tundra Pokémon,88.1
+Sylveon,Intertwining Pokémon,88.1
+Hawlucha,Wrestling Pokémon,50
+Dedenne,Antenna Pokémon,50
+Carbink,Jewel Pokémon,
+Goomy,Soft Tissue Pokémon,50
+Sliggoo,Soft Tissue Pokémon,50
+Goodra,Dragon Pokémon,50
+Klefki,Key Ring Pokémon,50
+Phantump,Stump Pokémon,50
+Trevenant,Elder Tree Pokémon,50
+Pumpkaboo,Pumpkin Pokémon,50
+Gourgeist,Pumpkin Pokémon,50
+Bergmite,Ice Chunk Pokémon,50
+Avalugg,Iceberg Pokémon,50
+Noibat,Sound Wave Pokémon,50
+Noivern,Sound Wave Pokémon,50
+Xerneas,Life Pokémon,
+Yveltal,Destruction Pokémon,
+Zygarde,Order Pokémon,
+Diancie,Jewel Pokémon,
+Hoopa,Mischief Pokémon (Confined)Djinn Pokémonn (Unbound),
+Volcanion,Steam Pokémon,
+Rowlet,Grass Quill Pokémon,88.1
+Dartrix,Blade Quill Pokémon,88.1
+Decidueye,Arrow Quill Pokémon,88.1
+Litten,Fire Cat Pokémon,88.1
+Torracat,Fire Cat Pokémon,88.1
+Incineroar,Heel Pokémon,88.1
+Popplio,Sea Lion Pokémon,88.1
+Brionne,Pop Star Pokémon,88.1
+Primarina,Soloist Pokémon,88.1
+Pikipek,Woodpecker Pokémon,50
+Trumbeak,Bugle Beak Pokémon,50
+Toucannon,Cannon Pokémon,50
+Yungoos,Loitering Pokémon,50
+Gumshoos,Stakeout Pokémon,50
+Grubbin,Larva Pokémon,50
+Charjabug,Battery Pokémon,50
+Vikavolt,Stag Beetle Pokémon,50
+Crabrawler,Boxing Pokémon,50
+Crabominable,Woolly Crab Pokémon,50
+Oricorio,Dancing Pokémon,24.6
+Cutiefly,Bee Fly Pokémon,50
+Ribombee,Bee Fly Pokémon,50
+Rockruff,Puppy Pokémon,50
+Lycanroc,Wolf Pokémon,50
+Wishiwashi,Small Fry Pokémon,50
+Mareanie,Brutal Star Pokémon,50
+Toxapex,Brutal Star Pokémon,50
+Mudbray,Donkey Pokémon,50
+Mudsdale,Draft Horse Pokémon,50
+Dewpider,Water Bubble Pokémon,50
+Araquanid,Water Bubble Pokémon,50
+Fomantis,Sickle Grass Pokémon,50
+Lurantis,Bloom Sickle Pokémon,50
+Morelull,Illuminating Pokémon,50
+Shiinotic,Illuminating Pokémon,50
+Salandit,Toxic Lizard Pokémon,88.1
+Salazzle,Toxic Lizard Pokémon,0
+Stufful,Flailing Pokémon,50
+Bewear,Strong Arm Pokémon,50
+Bounsweet,Fruit Pokémon,0
+Steenee,Fruit Pokémon,0
+Tsareena,Fruit Pokémon,0
+Comfey,Posy Picker Pokémon,24.6
+Oranguru,Sage Pokémon,50
+Passimian,Teamwork Pokémon,50
+Wimpod,Turn Tail Pokémon,50
+Golisopod,Hard Scale Pokémon,50
+Sandygast,Sand Heap Pokémon,50
+Palossand,Sand Castle Pokémon,50
+Pyukumuku,Sea Cucumber Pokémon,50
+Type: Null,Synthetic Pokémon,
+Silvally,Synthetic Pokémon,
+Minior,Meteor Pokémon,
+Komala,Drowsing Pokémon,50
+Turtonator,Blast Turtle Pokémon,50
+Togedemaru,Roly-Poly Pokémon,50
+Mimikyu,Disguise Pokémon,50
+Bruxish,Gnash Teeth Pokémon,50
+Drampa,Placid Pokémon,50
+Dhelmise,Sea Creeper Pokémon,
+Jangmo-o,Scaly Pokémon,50
+Hakamo-o,Scaly Pokémon,50
+Kommo-o,Scaly Pokémon,50
+Tapu Koko,Land Spirit Pokémon,
+Tapu Lele,Land Spirit Pokémon,
+Tapu Bulu,Land Spirit Pokémon,
+Tapu Fini,Land Spirit Pokémon,
+Cosmog,Nebula Pokémon,
+Cosmoem,Protostar Pokémon,
+Solgaleo,Sunne Pokémon,
+Lunala,Moone Pokémon,
+Nihilego,Parasite Pokémon,
+Buzzwole,Swollen Pokémon,
+Pheromosa,Lissome Pokémon,
+Xurkitree,Glowing Pokémon,
+Celesteela,Launch Pokémon,
+Kartana,Drawn Sword Pokémon,
+Guzzlord,Junkivore Pokémon,
+Necrozma,Prism Pokémon,
+Magearna,Artificial Pokémon,

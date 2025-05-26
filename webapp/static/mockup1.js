@@ -209,7 +209,7 @@ function loadWeakAndStrong(chosen_type) {
     });
 }
 
-function loadClass(pname) {
+function loadPokeClass(pname) {
     let newUrl = getAPIBaseURL() + '/pokemon_class/' + pname;
 
     // Send the request to the books API /types/ endpoint

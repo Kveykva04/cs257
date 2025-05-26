@@ -215,7 +215,7 @@ def get_pokemon_class(pokemon_name):
 
         pokemon_class  = []
         # Execute the query
-        query = '''SELECT pokemon_class_and_gender.class
+        query = '''SELECT pokemon_class_and_gender.pokemon_class
                     FROM pokemon_class_and_gender
                     WHERE pokemon_class_and_gender.name = %s;'''
     

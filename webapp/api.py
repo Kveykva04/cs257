@@ -203,3 +203,31 @@ def get_pokemon_strength_and_weakness(pokemon_name):
         print(e, file=sys.stderr)
 
     return json.dumps(pokemon_strength_and_weakness)
+
+@api.route('/pokemon_class/<pokemon_name>')
+def get_pokemon_class(pokemon_name):
+    
+    try:
+        # Create a "cursor", which is an object with which you can iterate
+        # over query results.
+        connection = get_connection()
+        cursor = connection.cursor()
+
+        pokemon_class  = []
+        # Execute the query
+        query = '''SELECT pokemon_class_and_gender.class
+                    FROM pokemon_class_and_gender
+                    WHERE pokemon_class_and_gender.name = %s;'''
+    
+        cursor.execute(query, (pokemon_name,))
+
+        # Iterate over the query results to produce the list of a given pokemon stats.
+        for row in cursor:
+            pokemon_class.append({'pokemon_class':row[0]})
+
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(pokemon_class)

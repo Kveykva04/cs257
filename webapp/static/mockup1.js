@@ -208,3 +208,32 @@ function loadWeakAndStrong(chosen_type) {
         console.log(error);
     });
 }
+
+function loadClass(pname) {
+    let newUrl = getAPIBaseURL() + '/pokemon_class/' + pname;
+
+    // Send the request to the books API /types/ endpoint
+    fetch(newUrl, {method: 'get'})
+
+    // When the results come back, transform them from a JSON string into
+    // a Javascript object (in this case, a list of author dictionaries).
+    .then((response) => response.json())
+
+    // Once you have your list of author dictionaries, use it to build
+    // an HTML table displaying the author names and lifespan.
+    .then(function(pclass) {
+        // Add the <option> elements to the <select> element
+
+        let pkclass = pclass[0];
+
+        let classline = pkclass['pokemon_class'];
+
+                let pokemon_class_line = document.getElementById('pokemon_class');
+                if (pokemon_class_line) {
+                    pokemon_class_line.innerHTML = classline;
+                }
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+}

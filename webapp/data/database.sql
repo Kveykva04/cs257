@@ -32,7 +32,7 @@ SET default_table_access_method = heap;
 
 CREATE TABLE public.pokemon_class_and_gender (
     name text,
-    class text,
+    pokemon_class text,
     gender double precision
 );
 
@@ -108,7 +108,7 @@ CREATE TABLE public.pokemon_weak (
 -- Data for Name: pokemon_class_and_gender; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.pokemon_class_and_gender (name, class, gender) FROM stdin;
+COPY public.pokemon_class_and_gender (name, pokemon_class, gender) FROM stdin;
 Bulbasaur	Seed Pokémon	88.1
 Ivysaur	Seed Pokémon	88.1
 Venusaur	Seed Pokémon	88.1

@@ -193,7 +193,7 @@ function loadWeakAndStrong(chosen_type) {
             weakline = '<tr><td>Weak Against:</td><td>' + SW['weak1'] + '</td></tr>';
         }
 
-        tableBody += '<tr>'
+        tableBody += '<tr style =  "font-size: 1px;">'
                         + strongline
                         + weakline
                         + '</tr>\n';

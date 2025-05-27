@@ -153,8 +153,10 @@ table, td, th {
 
 /* make things be able to be right next to eachother */
 .right_next{
+    position: absolute;
     display: flex;
     gap: 5px;
+    padding-left: 550px
 }
 
 #female{
@@ -183,7 +185,11 @@ table, td, th {
 
 /* make things be able to be next to eachother */
 .weakness_and_gender_side{
-    padding-left: 20%;
+    padding-right: 40px;
+    padding-left: 15%;
     display: flex;
-    gap: 200px;
+}
+
+#weakness_and_strength_table{
+    font-size: 4px;
 }

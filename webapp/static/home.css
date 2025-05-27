@@ -133,14 +133,15 @@ body {
 
 /* to make table */
 table, td, th {
-    font-size: 11px;
+    font-size: 20px;
     font-family: 'Press Start 2P';
     border: 1px solid white;
     padding: 10px;
     background-color: #878e88;
     color: white;
     border-spacing: 0;
-    border-collapse: seperate;
+    border-collapse: separate;
+
 }
 
 .gender_rectangle {
@@ -195,3 +196,7 @@ table, td, th {
     font-family: 'Press Start 2P';
    
 }
+
+#weakness_and_strength_table {
+    font-size: 14px;
+  }

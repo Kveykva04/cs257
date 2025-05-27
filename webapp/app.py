@@ -22,7 +22,7 @@ def get_help():
     return flask.render_template('help.html')
 
 @app.route('/search')
-def get_help():
+def get_search():
     return flask.render_template('search.html')
 
 if __name__ == '__main__':

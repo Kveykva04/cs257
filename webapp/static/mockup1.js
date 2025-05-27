@@ -121,6 +121,8 @@ function onNameSelectionChanged() {
         let chosen_type = type.value; 
 
         loadWeakAndStrong(chosen_type);
+        loadPokeClass(chosen_pokemon);
+        loadPokeGender(chosen_pokemon);
     })
 
     .catch(function(error) {
@@ -232,6 +234,56 @@ function loadPokeClass(pname) {
                 if (pokemon_class_line) {
                     pokemon_class_line.innerHTML = classline;
                 }
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+}
+
+function loadPokeGender(pname) {
+    let newUrl = getAPIBaseURL() + '/pokemon_gender/' + pname;
+
+    // Send the request to the books API /types/ endpoint
+    fetch(newUrl, {method: 'get'})
+
+    // When the results come back, transform them from a JSON string into
+    // a Javascript object (in this case, a list of author dictionaries).
+    .then((response) => response.json())
+
+    // Once you have your list of author dictionaries, use it to build
+    // an HTML table displaying the author names and lifespan.
+    .then(function(pclass) {
+        // Add the <option> elements to the <select> element
+
+        let pkgender = pclass[0];
+
+        let maleline = pkgender['gender'];
+        let femaleline = Math.round(100 - pkgender['gender']);
+
+        if (maleline != null){
+
+                let pokemon_class_line = document.getElementById('female');
+                if (pokemon_class_line) {
+                    pokemon_class_line.innerHTML = 'Male %: ' + maleline
+                }
+
+                let pokemon_class_line2 = document.getElementById('male');
+                if (pokemon_class_line2) {
+                    pokemon_class_line2.innerHTML = 'Female %: ' + femaleline
+                }
+            }
+
+        else{
+            let pokemon_class_line = document.getElementById('female');
+                if (pokemon_class_line) {
+                    pokemon_class_line.innerHTML = 'Male %: NA' 
+                }
+
+                let pokemon_class_line2 = document.getElementById('male');
+                if (pokemon_class_line2) {
+                    pokemon_class_line2.innerHTML = 'Female %: NA'
+                }
+        }
     })
     .catch(function(error) {
         console.log(error);

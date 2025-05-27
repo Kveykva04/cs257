@@ -231,3 +231,31 @@ def get_pokemon_class(pokemon_name):
         print(e, file=sys.stderr)
 
     return json.dumps(pokemon_class)
+
+@api.route('/pokemon_gender/<pokemon_name>')
+def get_pokemon_gender(pokemon_name):
+    
+    try:
+        # Create a "cursor", which is an object with which you can iterate
+        # over query results.
+        connection = get_connection()
+        cursor = connection.cursor()
+
+        pokemon_gender  = []
+        # Execute the query
+        query = '''SELECT pokemon_class_and_gender.gender
+                    FROM pokemon_class_and_gender
+                    WHERE pokemon_class_and_gender.name = %s;'''
+    
+        cursor.execute(query, (pokemon_name,))
+
+        # Iterate over the query results to produce the list of a given pokemon stats.
+        for row in cursor:
+            pokemon_gender.append({'gender':row[0]})
+
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(pokemon_gender)

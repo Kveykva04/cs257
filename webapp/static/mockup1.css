@@ -38,12 +38,15 @@ ul.horizontal-navbar li a:hover {
 }
 
   #search-navbar{
-    padding-top: 7pt;
+    padding-top: 7px;
+    padding-bottom: 7px;
     font-size: 12pt;
     float:right;
 }
 
 #home-navbar{
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-left: 5%;
     padding-right: 5%;
     float:left;

@@ -19,13 +19,14 @@ ul.horizontal-navbar li a {
 }
 
 ul.horizontal-navbar li a:hover {
-    background-color: #555;
+    background-color: #878e88;
     color: white;
 }
 
 #red-navbar {
     font-size: 24pt;
-    background-color: #ee1515
+    border-radius: 12px;
+    background-color: #96c0b7
     
   }
 
@@ -70,7 +71,8 @@ body {
     height: 50%;
     justify-content: center;
     align-items: center;
-    background-color: #ee1515;
+    border-radius: 12px;
+    background-color: #96c0b7;
 }
 
 .classification {
@@ -115,6 +117,10 @@ body {
 
 /* to make table */
 table, td, th {
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 10px;
+    background-color: #878e88;
+    color: white;
+    border-spacing: 0;
+    border-collapse: seperate;
 }

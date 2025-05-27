@@ -13,6 +13,8 @@ ul.horizontal-navbar li {
 }
 
 ul.horizontal-navbar li a {
+    font-family: 'Press Start 2P';
+    font-size: 13px;
     display: block;
     color: black;
     text-align: center;
@@ -21,13 +23,17 @@ ul.horizontal-navbar li a {
 }
 
 ul.horizontal-navbar li a:hover {
-    background-color: #555;
+    background-color: #878e88;
     color: white;
+    border-radius: 2px;
 }
 
 #red-navbar {
+    font-family: 'Press Start 2P';
     font-size: 24pt;
-    background-color: #ee1515
+    border-radius: 12px;
+    background-color: #96c0b7
+    
     
 }
 
@@ -56,37 +62,45 @@ body {
 }
 
 .name {
-    font-size: 24pt;
+    font-family: 'Press Start 2P';
     display: flex;
     color: black;
 }
 
 #pokemon_name {
+    font-family: 'Press Start 2P';
     width: 60%;
     height: 50%;
     justify-content: center;
     align-items: center;
-    background-color: #ee1515;
+    background-color: #96c0b7;
+    border-radius: 12px;
 }
 
 #pokemon_type1 {
+    font-size: 11px;
+    font-family: 'Press Start 2P';
     width: 60%;
     height: 50%;
     justify-content: center;
     align-items: center;
-    background-color: #ee1515;
+    background-color: #96c0b7;
+    border-radius: 12px;
 }
 
 #pokemon_type2 {
+    font-size: 11px;
+    font-family: 'Press Start 2P';
     width: 60%;
     height: 50%;
     justify-content: center;
     align-items: center;
-    background-color: #ee1515;
+    border-radius: 12px;
+    background-color: #96c0b7;
 }
 
 .classification {
-    font-size: 14pt;
+    font-size: 11px;
     display: flex;
     color: black;
 }
@@ -112,26 +126,31 @@ body {
     gap: 200px;
 }
 
-.base_stats_font {
-    font-size: 20pt;
-    color: black;
-}
 
 /* to make table */
 table, td, th {
-    border: 1px solid black;
+    font-size: 11px;
+    font-family: 'Press Start 2P';
+    border: 1px solid white;
     padding: 10px;
+    background-color: #878e88;
+    color: white;
+    border-spacing: 0;
+    border-collapse: seperate;
 }
 
 .gender_rectangle {
+    font-family: 'Press Start 2P';
     height: 100px;
     width: 200px;
+    
     
 }
 
 /* make things be able to be right next to eachother */
 .right_next{
     display: flex;
+    gap: 5px;
 }
 
 #female{
@@ -139,7 +158,12 @@ table, td, th {
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: pink;
+    border-radius: 12px;
+    border: 2px solid white;
+    color: white;
+    background-color: #725752;
+    
+
 }
 
 #male{
@@ -147,8 +171,10 @@ table, td, th {
     height: 100%;
     justify-content: center;
     align-items: center;
+    border: 2px solid white;
     color: white;
-    background-color: blue;
+    border-radius: 12px;
+    background-color: #725752;
 }
 
 /* make things be able to be next to eachother */

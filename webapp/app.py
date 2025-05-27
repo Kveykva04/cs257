@@ -21,6 +21,10 @@ def get_type_search():
 def get_help():
     return flask.render_template('help.html')
 
+@app.route('/search')
+def get_help():
+    return flask.render_template('search.html')
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('A Flask aplication that lists pokemon of a given type')
     parser.add_argument('host', help='the host on which this application is running')

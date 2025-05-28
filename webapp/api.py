@@ -44,8 +44,8 @@ def get_types():
 
 
 @api.route('/type/<pokemon_type>')
-def get_pokemon_by_type(search_text):
-    chosen_type = search_text
+def get_pokemon_by_type(pokemon_type):
+    chosen_type = pokemon_type
     pokemon_by_type = []
     try:
         # Create a "cursor", which is an object with which you can iterate
@@ -58,8 +58,8 @@ def get_pokemon_by_type(search_text):
                         FROM pokemon_type_stats
                         WHERE pokemon_type_stats.type1 = %s
                         OR pokemon_type_stats.type2 = %s
-                        ORDER BY pokemon_type_stats.base_total;'''
-        cursor.execute(query, (chosen_type,))
+                        ORDER BY pokemon_type_stats.base_total DESC;'''
+        cursor.execute(query, (chosen_type, chosen_type,))
 
         # Iterate over the query results to produce the list of pokemon of a given type.
         for row in cursor:

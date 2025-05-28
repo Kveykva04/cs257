@@ -1,3 +1,5 @@
+
+
 ul.horizontal-navbar {
     list-style-type: none;
     margin: 0;
@@ -11,6 +13,8 @@ ul.horizontal-navbar li {
 }
 
 ul.horizontal-navbar li a {
+    font-family: 'Press Start 2P';
+    font-size: 13px;
     display: block;
     color: black;
     text-align: center;
@@ -21,22 +25,28 @@ ul.horizontal-navbar li a {
 ul.horizontal-navbar li a:hover {
     background-color: #878e88;
     color: white;
+    border-radius: 2px;
 }
 
 #red-navbar {
+    font-family: 'Press Start 2P';
     font-size: 24pt;
     border-radius: 12px;
     background-color: #96c0b7
     
-  }
+    
+}
 
-#search-navbar{
-    padding-top: 7pt;
+  #search-navbar{
+    padding-top: 7px;
+    padding-bottom: 7px;
     font-size: 12pt;
     float:right;
 }
 
 #home-navbar{
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-left: 5%;
     padding-right: 5%;
     float:left;
@@ -51,22 +61,39 @@ body {
     justify-content: center;
     align-items: center;
     height: 70px;
-}
-
-/* make things be able to be next to eachother */
-.strength_weakness_side{
-    padding-left: 20%;
-    display: flex;
-    gap: 200px;
+    
 }
 
 .name {
-    font-size: 24pt;
+    font-family: 'Press Start 2P';
     display: flex;
     color: black;
 }
 
-#pokemon_name {
+#pokemon_type {
+    font-family: 'Press Start 2P';
+    width: 60%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #96c0b7;
+    border-radius: 12px;
+}
+
+#pokemon_type1 {
+    font-size: 11px;
+    font-family: 'Press Start 2P';
+    width: 60%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #96c0b7;
+    border-radius: 12px;
+}
+
+#pokemon_type2 {
+    font-size: 11px;
+    font-family: 'Press Start 2P';
     width: 60%;
     height: 50%;
     justify-content: center;
@@ -76,7 +103,7 @@ body {
 }
 
 .classification {
-    font-size: 14pt;
+    font-size: 11px;
     display: flex;
     color: black;
 }
@@ -90,9 +117,11 @@ body {
 
 /* smaller rectangle */
 .type_rectangle {
+   
     height: 70px;
     width: 40%;
-    padding-left: 22.5%;
+    padding-left: 1%;
+    padding-top: 2%;
 }
 
 /* absol and chart next to eachother */
@@ -102,25 +131,66 @@ body {
     gap: 200px;
 }
 
-.type-side_by_side{
-    display: flex;
-    gap: 0px;
-    padding-left: 5%;
-    padding-right: 15%;
-    padding-top: 1%;
-}
-
-.base_stats_font {
-    font-size: 20pt;
-    color: black;
-}
 
 /* to make table */
 table, td, th {
+    font-size: 11px;
+    font-family: 'Press Start 2P';
     border: 1px solid white;
     padding: 10px;
     background-color: #878e88;
     color: white;
     border-spacing: 0;
     border-collapse: seperate;
+}
+
+.gender_rectangle {
+    font-family: 'Press Start 2P';
+    height: 100px;
+    width: 200px;
+    
+    
+}
+
+/* make things be able to be right next to eachother */
+.right_next{
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    padding-left: 550px
+}
+
+#female{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 2px solid white;
+    color: white;
+    background-color: #725752;
+    
+
+}
+
+#male{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    color: white;
+    border-radius: 12px;
+    background-color: #725752;
+}
+
+/* make things be able to be next to eachother */
+.weakness_and_gender_side{
+    padding-right: 40px;
+    padding-left: 15%;
+    display: flex;
+}
+
+#weakness_and_strength_table{
+    font-size: 4px;
 }

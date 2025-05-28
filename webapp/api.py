@@ -43,13 +43,9 @@ def get_types():
     return json.dumps(types)
 
 
-@api.route('/type/<pokemon_type>/[best={BEST}]')
-def get_pokemon_by_type(search_text, best):
+@api.route('/type/<pokemon_type>')
+def get_pokemon_by_type(search_text):
     chosen_type = search_text
-    if (best):
-        best_bool = best
-    else:
-        best_bool = False
     pokemon_by_type = []
     try:
         # Create a "cursor", which is an object with which you can iterate
@@ -58,25 +54,16 @@ def get_pokemon_by_type(search_text, best):
         cursor = connection.cursor()
 
         # Execute the query
-        query = '''SELECT pokemon_type_stats.name, pokemon_type_stats.type1, pokemon_type_stats.type2
-                    FROM pokemon_type_stats
-                    WHERE pokemon_type_stats.type1 = %s
-                    OR pokemon_type_stats.type2 = %s;'''
-        connection = get_connection()
-        cursor = connection.cursor()
-        if(best_bool == True):
-            new_query = '''SELECT pokemon_type_stats.name, pokemon_type_stats.type1, pokemon_type_stats.type2, pokemon_type_stats.base_total
+        query = '''SELECT pokemon_type_stats.name, pokemon_type_stats.type1, pokemon_type_stats.type2, pokemon_type_stats.base_total
                         FROM pokemon_type_stats
                         WHERE pokemon_type_stats.type1 = %s
                         OR pokemon_type_stats.type2 = %s
                         ORDER BY pokemon_type_stats.base_total;'''
-            cursor.execute(new_query, (chosen_type, best_bool,))
-        else:
-            cursor.execute(query, (chosen_type,))
+        cursor.execute(query, (chosen_type,))
 
         # Iterate over the query results to produce the list of pokemon of a given type.
         for row in cursor:
-            pokemon_by_type.append({'Name':row[0], 'Type1':row[1], 'Type2':row[2]})
+            pokemon_by_type.append({'Name':row[0], 'Type1':row[1], 'Type2':row[2], 'Base Total':row[3]})
 
         cursor.close()
         connection.close()

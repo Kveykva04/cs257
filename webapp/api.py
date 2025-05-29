@@ -246,3 +246,33 @@ def get_pokemon_gender(pokemon_name):
         print(e, file=sys.stderr)
 
     return json.dumps(pokemon_gender)
+
+    #####
+
+@api.route('/pokemon_sprite/<pokemon_name>')
+def get_pokemon_sprite(pokemon_name):
+    
+    try:
+        # Create a "cursor", which is an object with which you can iterate
+        # over query results.
+        connection = get_connection()
+        cursor = connection.cursor()
+
+        pokemon_sprite  = []
+        # Execute the query
+        query = '''SELECT png.png
+                    FROM png
+                    WHERE png.name =%s;'''
+    
+        cursor.execute(query, (pokemon_name,))
+
+        # Iterate over the query results to produce the list of a given pokemon stats.
+        for row in cursor:
+            pokemon_sprite.append({'sprite':row[0]})
+
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(pokemon_sprites)

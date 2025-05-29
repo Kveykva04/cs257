@@ -5,6 +5,7 @@ function initialize() {
 
     let element = document.getElementById('pokemon_selector');
     if (element) {
+        
         element.onchange = onNameSelectionChanged;
     }
 }
@@ -33,6 +34,8 @@ function loadNameSelector() {
     // an HTML table displaying the author names and lifespan.
     .then(function(names) {
         // Add the <option> elements to the <select> element
+        let selector = document.getElementById('pokemon_selector');
+        let name = selector.value;
         let selectorBody = '';
         for (let k = 0; k < names.length; k++) {
             let name_list = names[k];
@@ -41,9 +44,14 @@ function loadNameSelector() {
                                 + '</option>\n';
         }
 
-        let selector = document.getElementById('pokemon_selector');
         if (selector) {
             selector.innerHTML = selectorBody;
+            onNameSelectionChanged();
+        }
+        if(name)
+        {
+            selector.value = name;
+            onNameSelectionChanged();
         }
     })
 

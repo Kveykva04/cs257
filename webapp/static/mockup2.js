@@ -72,7 +72,7 @@ function onNameSelectionChanged() {
         for (let k = 0; k < pokemon_by_type.length; k++) {
             let pokemon = pokemon_by_type[k];
             tableBody += '<tr>'
-                            + '<td><a href= "/mockup1">' + pokemon['Name'] + '</a></td>'
+                            + '<td><a href= "/mockup1?name=' + pokemon['Name'] + '">' + pokemon['Name'] + '</a></td>'
                             + '<td>' + pokemon['Type1'] + '</td>'
                             + '<td>' + pokemon['Type2'] + '</td>'
                             + '<td>' + pokemon['Base Total'] + '</td>'

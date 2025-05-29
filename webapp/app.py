@@ -11,7 +11,8 @@ def home():
 
 @app.route('/mockup1')
 def get_poke_search():
-    return flask.render_template('mockup1.html')
+    name = flask.request.args.get('name', default='')
+    return flask.render_template('mockup1.html', name=name)
 
 @app.route('/mockup2')
 def get_type_search():

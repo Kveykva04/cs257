@@ -314,7 +314,7 @@ function loadPokeSprite(pname) {
 
                 let pokemon_sprite_line = document.getElementById('sprites');
                 if (pokemon_sprite_line) {
-                    pokemon_sprite_line.src = 'new_sprites/' + sprite + '.png';
+                    pokemon_sprite_line.src = '/static/new_sprites/' + sprite + '.png';
                 }
     })
     .catch(function(error) {

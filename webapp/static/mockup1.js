@@ -1,9 +1,3 @@
-/*
- * books.js
- * Jeff Ondich, 27 April 2016
- * Updated, 5 November 2020
- */
-
 window.addEventListener("load", initialize);
 
 function initialize() {

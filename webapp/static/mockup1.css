@@ -111,8 +111,8 @@ body {
 .poke-image {
     width: 200px;        
     height: 200px;         
-    margin-left: 100px;   
-    margin-top: 10px;     
+    margin-left: 180px;   
+    margin-top: 40px;     
 }
 
 /* smaller rectangle */
@@ -191,5 +191,5 @@ table, td, th {
 }
 
 #weakness_and_strength_table{
-    font-size: 4px;
+    font-size: 200px;
 }

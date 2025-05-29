@@ -125,6 +125,7 @@ function onNameSelectionChanged() {
         loadWeakAndStrong(chosen_type);
         loadPokeClass(chosen_pokemon);
         loadPokeGender(chosen_pokemon);
+        loadPokeSprite(chosen_pokemon);
     })
 
     .catch(function(error) {

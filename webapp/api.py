@@ -275,4 +275,4 @@ def get_pokemon_sprite(pokemon_name):
     except Exception as e:
         print(e, file=sys.stderr)
 
-    return json.dumps(pokemon_sprites)
+    return json.dumps(pokemon_sprite)

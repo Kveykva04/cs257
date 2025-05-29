@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script type="text/javascript" src="{{ url_for('static', filename='search.js') }}" ></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}" type="text/css"/>
 </head>
-<body>
-    <p>search</p>
-    <input type="text" id="pokemon_search" style = "width: 400px; height: 40px; font-size: 20px; "/>
-    <div> wtf is even going on</div>
+<body style ="background-color: #d4dfc7">
+    <ul class="horizontal-navbar"  id = "red-navbar">
+        <li id = "home-navbar"><a href="/">Home Title</a></li>
+        <li id = "search-navbar"><a href="/mockup1">Pokemon Search</a></li>
+        <li id = "search-navbar"><a href="/mockup2">Type Search</a></li>
+    </ul>
+
+    <div id = "title_text">Enter a Pokemon Name</div>
+    <form action="mouckup1.html" method="GET">
+        <div>
+    <input type="text" name="query" id="pokemon_search"/>
+    <button type="submit"  id = "submit">Search</button>
+        </div>
+    </form>
 </body>
 </html>

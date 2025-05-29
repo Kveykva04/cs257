@@ -1,9 +1,72 @@
 #pokemon_search{
-    width: 200px;
-    height: 30px;
+    width: 600px;
+    height: 60px;
+    font-size: 40px;
+    position: relative;
+    top: 200px;
+    left: 300px;
+}
+#title_text{
+    font-size: 40px;
+    font-family: 'Press Start 2P';
+    position: relative;
+    top: 170px;
+    left: 320px;
 }
 
-body {
-    background-color: red;
-  }
-  
+ul.horizontal-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+ul.horizontal-navbar li a {
+    font-family: 'Press Start 2P';
+    font-size: 13px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.horizontal-navbar li a:hover {
+    background-color: #878e88;
+    color: white;
+    border-radius: 2px;
+}
+
+#red-navbar {
+    font-family: 'Press Start 2P';
+    font-size: 24pt;
+    border-radius: 12px;
+    background-color: #96c0b7
+    
+    
+}
+
+  #search-navbar{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 12pt;
+    float:right;
+}
+
+#home-navbar{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 5%;
+    padding-right: 5%;
+    float:left;
+}
+#submit{
+    font-family: 'Press Start 2P';
+    font-size: 20px;
+    width: 250px;
+    height: 60px;
+    position: relative;
+    top: 195px;
+    left: 300px;
+}

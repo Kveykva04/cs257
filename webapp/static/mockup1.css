@@ -193,3 +193,12 @@ table, td, th {
 #weakness_and_strength_table{
     font-size: 200px;
 }
+
+#pokemon_selector{
+    text-align: center;         
+    text-align-last: center; 
+    background-color:#96c0b7 ;
+    height: 25px;
+    font-family: 'Press Start 2P';
+
+}

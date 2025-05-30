@@ -260,7 +260,7 @@ function loadPokeGender(pname) {
 
         let pkgender = pclass[0];
 
-        let maleline = pkgender['gender'];
+        let maleline = Math.round(pkgender['gender']);
         let femaleline = Math.round(100 - pkgender['gender']);
 
         if (maleline != null){

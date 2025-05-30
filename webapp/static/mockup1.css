@@ -195,6 +195,7 @@ table, td, th {
 }
 
 #pokemon_selector{
+    border: 0px;
     text-align: center;         
     text-align-last: center; 
     background-color:#96c0b7 ;

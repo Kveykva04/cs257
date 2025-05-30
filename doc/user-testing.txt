@@ -1,0 +1,9 @@
+-Change drop down to match font of rest of html
+-Give filler options while searching for a pokemon
+-Narrow space between the pokemons typing boxes and the name and classification
+-Add more sorting options 
+-Seperate the type search and pokemon search buttons more distinctly 
+-Fix strong and weak tables to account for pokemon that have less that five strengths or weaknesses 
+-Account for the user misspelling or not capatalized name 
+-Fix font size of table to not overlap with gender %
+-Center things in type search to be in the middle of the page

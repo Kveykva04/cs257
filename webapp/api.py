@@ -170,7 +170,7 @@ def get_pokemon_by_generation(generation_number, is_legendary):
 
 @api.route('/strong_weak/<pokemon_name>')
 def get_pokemon_strength_and_weakness(pokemon_name):
-    
+    ilike_argument = '%' + pokemon_name + '%'
     try:
         # Create a "cursor", which is an object with which you can iterate
         # over query results.
@@ -188,7 +188,7 @@ def get_pokemon_strength_and_weakness(pokemon_name):
         AND (pokemon_type_stats.type1 = pokemon_weak.type
         OR pokemon_type_stats.type2 = pokemon_weak.type);'''
     
-        cursor.execute(query, (pokemon_name,))
+        cursor.execute(query, (ilike_argument,))
 
         # Iterate over the query results to produce the list of a given pokemon stats.
         for row in cursor:
@@ -212,7 +212,7 @@ def get_pokemon_strength_and_weakness(pokemon_name):
 
 @api.route('/pokemon_class/<pokemon_name>')
 def get_pokemon_class(pokemon_name):
-    
+    ilike_argument = '%' + pokemon_name + '%'
     try:
         # Create a "cursor", which is an object with which you can iterate
         # over query results.
@@ -225,7 +225,7 @@ def get_pokemon_class(pokemon_name):
                     FROM pokemon_class_and_gender
                     WHERE LOWER(pokemon_class_and_gender.name) ILIKE LOWER(%s);'''
     
-        cursor.execute(query, (pokemon_name,))
+        cursor.execute(query, (ilike_argument,))
 
         # Iterate over the query results to produce the list of a given pokemon stats.
         for row in cursor:
@@ -240,7 +240,7 @@ def get_pokemon_class(pokemon_name):
 
 @api.route('/pokemon_gender/<pokemon_name>')
 def get_pokemon_gender(pokemon_name):
-    
+    ilike_argument = '%' + pokemon_name + '%'
     try:
         # Create a "cursor", which is an object with which you can iterate
         # over query results.
@@ -253,7 +253,7 @@ def get_pokemon_gender(pokemon_name):
                     FROM pokemon_class_and_gender
                     WHERE LOWER(pokemon_class_and_gender.name) ILIKE LOWER(%s);'''
     
-        cursor.execute(query, (pokemon_name,))
+        cursor.execute(query, (ilike_argument,))
 
         # Iterate over the query results to produce the list of a given pokemon stats.
         for row in cursor:
@@ -270,7 +270,7 @@ def get_pokemon_gender(pokemon_name):
 
 @api.route('/pokemon_sprite/<pokemon_name>')
 def get_pokemon_sprite(pokemon_name):
-    
+    ilike_argument = '%' + pokemon_name + '%'
     try:
         # Create a "cursor", which is an object with which you can iterate
         # over query results.
@@ -281,9 +281,9 @@ def get_pokemon_sprite(pokemon_name):
         # Execute the query
         query = '''SELECT png.png
                     FROM png
-                    WHERE png.name =%s;'''
+                    WHERE png.name ILIKE %s;'''
     
-        cursor.execute(query, (pokemon_name,))
+        cursor.execute(query, (ilike_argument,))
 
         # Iterate over the query results to produce the list of a given pokemon stats.
         for row in cursor:

@@ -320,7 +320,7 @@ function loadPokeSprite(pname) {
 
                 let pokemon_sprite_line = document.getElementById('sprites');
                 if (pokemon_sprite_line) {
-                    pokemon_sprite_line.src = '/static/pokemon_gif/' + sprite + '.gif';
+                    pokemon_sprite_line.src = '/static/poke_sprites/' + sprite + '.gif';
                 }
     })
     .catch(function(error) {
@@ -349,7 +349,7 @@ function normal(pname) {
 
                 let pokemon_sprite_line = document.getElementById('sprites');
                 if (pokemon_sprite_line) {
-                    pokemon_sprite_line.src = '/static/pokemon_gif/' + sprite + '.gif';
+                    pokemon_sprite_line.src = '/static/poke_sprites/' + sprite + '.gif';
                 }
     })
     .catch(function(error) {
@@ -378,7 +378,7 @@ function shiny(pname) {
 
                 let pokemon_sprite_line = document.getElementById('sprites');
                 if (pokemon_sprite_line) {
-                    pokemon_sprite_line.src = '/static/pokemon_gif/' + sprite + '-s.gif';
+                    pokemon_sprite_line.src = '/static/poke_sprites/' + sprite + '-s.gif';
                 }
     })
     .catch(function(error) {

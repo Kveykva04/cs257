@@ -12,6 +12,7 @@ def home():
 @app.route('/Pokemon Search')
 def get_poke_search():
     name = flask.request.args.get('name', default='')
+    name = name.capitalize()
     return flask.render_template('Pokemon Search.html', name=name)
 
 @app.route('/Type Search')

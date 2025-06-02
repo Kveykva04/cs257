@@ -182,7 +182,7 @@ def get_pokemon_strength_and_weakness(pokemon_name):
         query = '''SELECT pokemon_strong.strong1, pokemon_strong.strong2, pokemon_strong.strong3, pokemon_strong.strong4, pokemon_strong.strong5, pokemon_weak.weak1, pokemon_weak.weak2, pokemon_weak.weak3, pokemon_weak.weak4, pokemon_weak.weak5
         FROM pokemon_strong, pokemon_type_stats, pokemon_weak
         WHERE pokemon_strong.type = pokemon_weak.type
-        AND LOWER(pokemon_type_stats.name) ILIKE LOWER(%s)
+        AND pokemon_type_stats.name ILIKE %s
         AND (pokemon_type_stats.type1 = pokemon_strong.type
         OR pokemon_type_stats.type2 = pokemon_strong.type)
         AND (pokemon_type_stats.type1 = pokemon_weak.type
@@ -223,7 +223,7 @@ def get_pokemon_class(pokemon_name):
         # Execute the query
         query = '''SELECT pokemon_class_and_gender.pokemon_class
                     FROM pokemon_class_and_gender
-                    WHERE LOWER(pokemon_class_and_gender.name) ILIKE LOWER(%s);'''
+                    WHERE pokemon_class_and_gender.name ILIKE %s;'''
     
         cursor.execute(query, (ilike_argument,))
 
@@ -251,7 +251,7 @@ def get_pokemon_gender(pokemon_name):
         # Execute the query
         query = '''SELECT pokemon_class_and_gender.gender
                     FROM pokemon_class_and_gender
-                    WHERE LOWER(pokemon_class_and_gender.name) ILIKE LOWER(%s);'''
+                    WHERE pokemon_class_and_gender.name ILIKE %s;'''
     
         cursor.execute(query, (ilike_argument,))
 

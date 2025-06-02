@@ -126,6 +126,12 @@ function onNameSelectionChanged() {
         loadPokeClass(chosen_pokemon);
         loadPokeGender(chosen_pokemon);
         loadPokeSprite(chosen_pokemon);
+    
+        var normal_button = document.getElementById('normal');
+        normal_button.onclick = () => normal(chosen_pokemon);
+
+        var shiny_button = document.getElementById('shiny');
+        shiny_button.onclick = () => shiny(chosen_pokemon);
     })
 
     .catch(function(error) {
@@ -315,6 +321,64 @@ function loadPokeSprite(pname) {
                 let pokemon_sprite_line = document.getElementById('sprites');
                 if (pokemon_sprite_line) {
                     pokemon_sprite_line.src = '/static/pokemon_gif/' + sprite + '.gif';
+                }
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+}
+
+function normal(pname) {
+    let newUrl = getAPIBaseURL() + '/pokemon_sprite/' + pname;
+
+    // Send the request to the books API /types/ endpoint
+    fetch(newUrl, {method: 'get'})
+
+    // When the results come back, transform them from a JSON string into
+    // a Javascript object (in this case, a list of author dictionaries).
+    .then((response) => response.json())
+
+    // Once you have your list of author dictionaries, use it to build
+    // an HTML table displaying the author names and lifespan.
+    .then(function(pclass) {
+        // Add the <option> elements to the <select> element
+
+        let pkclass = pclass[0];
+
+        let sprite = pkclass['sprite'];
+
+                let pokemon_sprite_line = document.getElementById('sprites');
+                if (pokemon_sprite_line) {
+                    pokemon_sprite_line.src = '/static/pokemon_gif/' + sprite + '.gif';
+                }
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+}
+
+function shiny(pname) {
+    let newUrl = getAPIBaseURL() + '/pokemon_sprite/' + pname;
+
+    // Send the request to the books API /types/ endpoint
+    fetch(newUrl, {method: 'get'})
+
+    // When the results come back, transform them from a JSON string into
+    // a Javascript object (in this case, a list of author dictionaries).
+    .then((response) => response.json())
+
+    // Once you have your list of author dictionaries, use it to build
+    // an HTML table displaying the author names and lifespan.
+    .then(function(pclass) {
+        // Add the <option> elements to the <select> element
+
+        let pkclass = pclass[0];
+
+        let sprite = pkclass['sprite'];
+
+                let pokemon_sprite_line = document.getElementById('sprites');
+                if (pokemon_sprite_line) {
+                    pokemon_sprite_line.src = '/static/pokemon_gif/' + sprite + '-s.gif';
                 }
     })
     .catch(function(error) {

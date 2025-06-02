@@ -98,6 +98,7 @@ def get_all_pokemon():
 @api.route('/pokemon/<pokemon_name>')
 def get_pokemon_stats_by_name(pokemon_name):
     pokemon_by_name = []
+    ilike_argument = '%' + pokemon_name + '%'
     try:
         # Create a "cursor", which is an object with which you can iterate
         # over query results.
@@ -107,10 +108,10 @@ def get_pokemon_stats_by_name(pokemon_name):
         # Execute the query
         query = '''SELECT pokemon_type_stats.name, pokemon_type_stats.type1, pokemon_type_stats.type2, pokemon_type_stats.base_total, pokemon_type_stats.hp, pokemon_type_stats.attack, pokemon_type_stats.defense, pokemon_type_stats.sp_attack, pokemon_type_stats.sp_defense, pokemon_type_stats.speed
                     FROM pokemon_type_stats
-                    WHERE LOWER(pokemon_type_stats.name) ILIKE LOWER(%s);'''
+                    WHERE pokemon_type_stats.name ILIKE %s; '''
         connection = get_connection()
         cursor = connection.cursor()
-        cursor.execute(query, (pokemon_name,))
+        cursor.execute(query, (ilike_argument,))
 
         # Iterate over the query results to produce the list of a given pokemon stats.
         for row in cursor:

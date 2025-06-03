@@ -265,14 +265,14 @@ function loadPokeGender(pname) {
 
         let pkgender = pclass[0];
 
-        let maleline = Math.round(pkgender['gender']);
+        let maleline = pkgender['gender'];
         let femaleline = Math.round(100 - pkgender['gender']);
 
         if (maleline != null){
 
                 let pokemon_class_line = document.getElementById('female');
                 if (pokemon_class_line) {
-                    pokemon_class_line.innerHTML = 'Male %: ' + maleline
+                    pokemon_class_line.innerHTML = 'Male %: ' + Math.round(pkgender['gender']);
                 }
 
                 let pokemon_class_line2 = document.getElementById('male');
@@ -284,12 +284,12 @@ function loadPokeGender(pname) {
         else{
             let pokemon_class_line = document.getElementById('female');
                 if (pokemon_class_line) {
-                    pokemon_class_line.innerHTML = 'Male %: NA' 
+                    pokemon_class_line.innerHTML = 'Male %: N/A' 
                 }
 
                 let pokemon_class_line2 = document.getElementById('male');
                 if (pokemon_class_line2) {
-                    pokemon_class_line2.innerHTML = 'Female %: NA'
+                    pokemon_class_line2.innerHTML = 'Female %: N/A'
                 }
         }
     })

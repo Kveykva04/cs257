@@ -210,17 +210,42 @@ table.smaller tr td {
 }
 
 #normal{
+    height:20px;
+    width: 100px;
     font-family: 'Press Start 2P';
     font-size: 12px;
+    border-radius: 12px;
     position: relative;
     bottom: 510px;
     left: 390px;
+    border: 1px solid black;
+    background-color: #96c0b7;
 }
 
 #shiny{
+    height:20px;
+    width: 100px;
+    border-radius: 12px;
     font-family: 'Press Start 2P';
     font-size: 12px;
     position: relative;
     bottom: 510px;
     left: 410px;
+    border: 1px solid black;
+    background-color: #96c0b7;
 }
+
+#normal:hover{
+    color: white;
+    background-color:#878e88;
+}
+
+#shiny:hover{
+    color: white;
+    background-color:#878e88;
+}
+body {
+    cursor: url('/static/poke_sprites/s20608.gif') 0 0, auto;
+  }
+  
+  

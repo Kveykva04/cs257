@@ -46,7 +46,6 @@ function loadNameSelector() {
 
         if (selector) {
             selector.innerHTML = selectorBody;
-            //onNameSelectionChanged();
         }
         if(name)
         {

@@ -1,0 +1,1 @@
+This project was created by Tara Wright and Lauren Caldwell as a project for Carleton College's Software Design course.

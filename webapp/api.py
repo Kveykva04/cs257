@@ -20,6 +20,7 @@ def get_connection():
         print(e, file=sys.stderr)
         exit()
 
+#rout to get pokemon types
 @api.route('/types/')
 def get_types():
 
@@ -42,14 +43,12 @@ def get_types():
 
     return json.dumps(types)
 
-
+#rout to get pokemon of a type
 @api.route('/type/<pokemon_type>')
 def get_pokemon_by_type(pokemon_type):
     chosen_type = pokemon_type
     pokemon_by_type = []
     try:
-        # Create a "cursor", which is an object with which you can iterate
-        # over query results.
         connection = get_connection()
         cursor = connection.cursor()
 
@@ -72,6 +71,7 @@ def get_pokemon_by_type(pokemon_type):
 
     return json.dumps(pokemon_by_type)
 
+#rout to get pokemon name
 @api.route('/allPokemon/')
 def get_all_pokemon():
 
@@ -95,6 +95,7 @@ def get_all_pokemon():
 
     return json.dumps(names)
 
+#rout to get a pokemons stats
 @api.route('/pokemon/<pokemon_name>')
 def get_pokemon_stats_by_name(pokemon_name):
     pokemon_by_name = []
@@ -133,6 +134,7 @@ def get_pokemon_stats_by_name(pokemon_name):
 
     return json.dumps(pokemon_by_name)
 
+#rout to get pokemon generation and if legendary
 @api.route('/generation/<generation_number>/[is_legendary={LEGENDARY}]')
 def get_pokemon_by_generation(generation_number, is_legendary):
     gen_num = generation_number
@@ -166,14 +168,11 @@ def get_pokemon_by_generation(generation_number, is_legendary):
     return json.dumps(pokemon_by_generation)
 
 
-    ########
-
+#rout to get pokemons strengths and weaknesses
 @api.route('/strong_weak/<pokemon_name>')
 def get_pokemon_strength_and_weakness(pokemon_name):
     ilike_argument = '%' + pokemon_name + '%'
     try:
-        # Create a "cursor", which is an object with which you can iterate
-        # over query results.
         connection = get_connection()
         cursor = connection.cursor()
 
@@ -210,12 +209,11 @@ def get_pokemon_strength_and_weakness(pokemon_name):
 
     return json.dumps(pokemon_strength_and_weakness)
 
+#rout to get pokemon classification
 @api.route('/pokemon_class/<pokemon_name>')
 def get_pokemon_class(pokemon_name):
     ilike_argument = '%' + pokemon_name + '%'
     try:
-        # Create a "cursor", which is an object with which you can iterate
-        # over query results.
         connection = get_connection()
         cursor = connection.cursor()
 
@@ -227,7 +225,6 @@ def get_pokemon_class(pokemon_name):
     
         cursor.execute(query, (ilike_argument,))
 
-        # Iterate over the query results to produce the list of a given pokemon stats.
         for row in cursor:
             pokemon_class.append({'pokemon_class':row[0]})
 
@@ -238,12 +235,11 @@ def get_pokemon_class(pokemon_name):
 
     return json.dumps(pokemon_class)
 
+#rout to get pokemon gender
 @api.route('/pokemon_gender/<pokemon_name>')
 def get_pokemon_gender(pokemon_name):
     ilike_argument = '%' + pokemon_name + '%'
     try:
-        # Create a "cursor", which is an object with which you can iterate
-        # over query results.
         connection = get_connection()
         cursor = connection.cursor()
 
@@ -255,7 +251,6 @@ def get_pokemon_gender(pokemon_name):
     
         cursor.execute(query, (ilike_argument,))
 
-        # Iterate over the query results to produce the list of a given pokemon stats.
         for row in cursor:
             pokemon_gender.append({'gender':row[0]})
 
@@ -266,14 +261,13 @@ def get_pokemon_gender(pokemon_name):
 
     return json.dumps(pokemon_gender)
 
-    #####
 
+#rout to get pokemon sprites
 @api.route('/pokemon_sprite/<pokemon_name>')
 def get_pokemon_sprite(pokemon_name):
     ilike_argument = '%' + pokemon_name + '%'
     try:
-        # Create a "cursor", which is an object with which you can iterate
-        # over query results.
+       
         connection = get_connection()
         cursor = connection.cursor()
 
@@ -285,7 +279,6 @@ def get_pokemon_sprite(pokemon_name):
     
         cursor.execute(query, (ilike_argument,))
 
-        # Iterate over the query results to produce the list of a given pokemon stats.
         for row in cursor:
             pokemon_sprite.append({'sprite':row[0]})
 

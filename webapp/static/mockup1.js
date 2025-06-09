@@ -11,7 +11,6 @@ function initialize() {
 }
 
 // Returns the base URL of the API, onto which endpoint
-// components can be appended.
 function getAPIBaseURL() {
     let baseURL = window.location.protocol
                     + '//' + window.location.hostname
@@ -20,23 +19,20 @@ function getAPIBaseURL() {
     return baseURL;
 }
 
+//creates the name selector drop down
 function loadNameSelector() {
     let url = getAPIBaseURL() + '/allPokemon/';
 
-    // Send the request to the books API /types/ endpoint
+    
     fetch(url, {method: 'get'})
 
-    // When the results come back, transform them from a JSON string into
-    // a Javascript object (in this case, a list of author dictionaries).
     .then((response) => response.json())
 
-    // Once you have your list of author dictionaries, use it to build
-    // an HTML table displaying the author names and lifespan.
     .then(function(names) {
-        // Add the <option> elements to the <select> element
         let selector = document.getElementById('pokemon_selector');
         let name = selector.value;
         let selectorBody = '';
+        //add each pokemon by name
         for (let k = 0; k < names.length; k++) {
             let name_list = names[k];
             selectorBody += '<option value="' + name_list['name'] + '">'
@@ -60,6 +56,7 @@ function loadNameSelector() {
     });
 }
 
+//what happens when the drop down name slection is changed 
 function onNameSelectionChanged() {
     let element = document.getElementById('pokemon_selector');
     if (!element) {
@@ -79,7 +76,6 @@ function onNameSelectionChanged() {
         let type2Body = '';
         let pokemon = pokemon_list[0];
 
-        //need an sql and api for classification, gender, strengths, weaknesses, and (images?)
         tableBody += '<tr>'
                         + '<tr><th>Stat</th><th>Points</th></tr>'
                         + '<tr><td>HP</td><td>' + pokemon['hp'] + '</td></tr>'
@@ -138,27 +134,22 @@ function onNameSelectionChanged() {
     });
 }
 
-
+//loads the weaknesses and strengths of a given pokemon
 function loadWeakAndStrong(chosen_type) {
     let newUrl = getAPIBaseURL() + '/strong_weak/' + chosen_type;
 
-    // Send the request to the books API /types/ endpoint
     fetch(newUrl, {method: 'get'})
 
-    // When the results come back, transform them from a JSON string into
-    // a Javascript object (in this case, a list of author dictionaries).
     .then((response) => response.json())
 
-    // Once you have your list of author dictionaries, use it to build
-    // an HTML table displaying the author names and lifespan.
     .then(function(sAndw) {
-        // Add the <option> elements to the <select> element
+      
         let tableBody = '';
         let strongline = '';
         let weakline = '';
 
         let SW = sAndw[0];
-
+        //check if the pokemon has five strengths or weaknesses if not move on ect
         if(SW['strong5'] != null)
         {
             strongline = '<tr><td>Strong Against:</td><td>' + SW['strong1'] + '</td><td>' +  SW['strong2'] + '</td><td>' +  SW['strong3'] + '</td><td>' +  SW['strong4'] + '</td><td>' +  SW['strong5'] + '</td></tr>';
@@ -219,20 +210,15 @@ function loadWeakAndStrong(chosen_type) {
     });
 }
 
+//changes the classification on the page to match the selcted pokemon
 function loadPokeClass(pname) {
     let newUrl = getAPIBaseURL() + '/pokemon_class/' + pname;
-
-    // Send the request to the books API /types/ endpoint
     fetch(newUrl, {method: 'get'})
 
-    // When the results come back, transform them from a JSON string into
-    // a Javascript object (in this case, a list of author dictionaries).
     .then((response) => response.json())
 
-    // Once you have your list of author dictionaries, use it to build
-    // an HTML table displaying the author names and lifespan.
     .then(function(pclass) {
-        // Add the <option> elements to the <select> element
+
 
         let pkclass = pclass[0];
 
@@ -248,20 +234,15 @@ function loadPokeClass(pname) {
     });
 }
 
+//changes the pokemon gender percentages on the page to match the selcted pokemon
 function loadPokeGender(pname) {
     let newUrl = getAPIBaseURL() + '/pokemon_gender/' + pname;
 
-    // Send the request to the books API /types/ endpoint
     fetch(newUrl, {method: 'get'})
 
-    // When the results come back, transform them from a JSON string into
-    // a Javascript object (in this case, a list of author dictionaries).
     .then((response) => response.json())
 
-    // Once you have your list of author dictionaries, use it to build
-    // an HTML table displaying the author names and lifespan.
     .then(function(pclass) {
-        // Add the <option> elements to the <select> element
 
         let pkgender = pclass[0];
 
@@ -280,7 +261,7 @@ function loadPokeGender(pname) {
                     pokemon_class_line2.innerHTML = 'Female %: ' + femaleline
                 }
             }
-
+            //if pokemon is genderless
         else{
             let pokemon_class_line = document.getElementById('female');
                 if (pokemon_class_line) {
@@ -297,21 +278,15 @@ function loadPokeGender(pname) {
         console.log(error);
     });
 }
-
+//initially loads the selected pokemons image
 function loadPokeSprite(pname) {
     let newUrl = getAPIBaseURL() + '/pokemon_sprite/' + pname;
 
-    // Send the request to the books API /types/ endpoint
     fetch(newUrl, {method: 'get'})
 
-    // When the results come back, transform them from a JSON string into
-    // a Javascript object (in this case, a list of author dictionaries).
     .then((response) => response.json())
-
-    // Once you have your list of author dictionaries, use it to build
-    // an HTML table displaying the author names and lifespan.
     .then(function(pclass) {
-        // Add the <option> elements to the <select> element
+     
 
         let pkclass = pclass[0];
 
@@ -327,20 +302,18 @@ function loadPokeSprite(pname) {
     });
 }
 
+//when the normal button is clicked it will change the selected pokemons image
+//to the normal image
 function normal(pname) {
     let newUrl = getAPIBaseURL() + '/pokemon_sprite/' + pname;
 
-    // Send the request to the books API /types/ endpoint
     fetch(newUrl, {method: 'get'})
 
-    // When the results come back, transform them from a JSON string into
-    // a Javascript object (in this case, a list of author dictionaries).
     .then((response) => response.json())
 
-    // Once you have your list of author dictionaries, use it to build
-    // an HTML table displaying the author names and lifespan.
+    
     .then(function(pclass) {
-        // Add the <option> elements to the <select> element
+
 
         let pkclass = pclass[0];
 
@@ -356,20 +329,19 @@ function normal(pname) {
     });
 }
 
+//when the shiny button is clicked it will switch the selected pokemons
+//image to that of its shiny form
 function shiny(pname) {
     let newUrl = getAPIBaseURL() + '/pokemon_sprite/' + pname;
 
-    // Send the request to the books API /types/ endpoint
     fetch(newUrl, {method: 'get'})
 
-    // When the results come back, transform them from a JSON string into
-    // a Javascript object (in this case, a list of author dictionaries).
+
     .then((response) => response.json())
 
-    // Once you have your list of author dictionaries, use it to build
-    // an HTML table displaying the author names and lifespan.
+
     .then(function(pclass) {
-        // Add the <option> elements to the <select> element
+
 
         let pkclass = pclass[0];
 

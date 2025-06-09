@@ -29,7 +29,7 @@ def get_search():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('A Flask aplication that lists pokemon of a given type')
-    parser.add_argument('--host', help='the host on which this application is running')
+    parser.add_argument('host', help='the host on which this application is running')
     parser.add_argument('port', type=int, help='the port on which this application is listening')
     arguments = parser.parse_args()
     app.run(host=arguments.host, port=arguments.port, debug=True)

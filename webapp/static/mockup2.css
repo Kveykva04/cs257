@@ -72,7 +72,7 @@ body {
 
 #pokemon_type {
     font-family: 'Press Start 2P';
-    width: 60%;
+    width: 30%;
     height: 50%;
     justify-content: center;
     align-items: center;
@@ -117,10 +117,8 @@ body {
 
 /* smaller rectangle */
 .type_rectangle {
-   
     height: 70px;
-    width: 40%;
-    padding-left: 1%;
+    padding-left: 41%;
     padding-top: 2%;
 }
 
@@ -142,6 +140,12 @@ table, td, th {
     color: white;
     border-spacing: 0;
     border-collapse: seperate;
+}
+
+.type_table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gender_rectangle {

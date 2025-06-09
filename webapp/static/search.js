@@ -16,6 +16,7 @@ function getAPIBaseURL() {
     return baseURL;
 }
 
+//when a pokemon is searched
 function onChangeWordButton() {
     let searchTerms = document.getElementById('pokemon_search').value;
     window.location.href = "/Pokemon Search?name=" + searchTerms;

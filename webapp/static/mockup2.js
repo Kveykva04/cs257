@@ -5,7 +5,7 @@ function initialize() {
 
     let element = document.getElementById('type_selector');
     if (element) {
-        element.onchange = onNameSelectionChanged;
+        element.onchange = onTypeSelectionChanged;
     }
 }
 
@@ -44,6 +44,7 @@ function loadTypeSelector() {
         let selector = document.getElementById('type_selector');
         if (selector) {
             selector.innerHTML = selectorBody;
+            onTypeSelectionChanged();
         }
     })
 
@@ -53,7 +54,7 @@ function loadTypeSelector() {
     });
 }
 
-function onNameSelectionChanged() {
+function onTypeSelectionChanged() {
     let element = document.getElementById('type_selector');
     if (!element) {
         return;
